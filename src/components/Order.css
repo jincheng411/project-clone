@@ -1,0 +1,22 @@
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-product {
+  flex:30%;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-product > img{
+  height: 180px;
+}
+.menu-title > h4{
+  margin-top: 15px;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #451400;
+}
