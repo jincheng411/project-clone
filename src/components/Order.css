@@ -7,16 +7,31 @@
   flex:30%;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 }
 
 .menu-product > img{
   height: 180px;
 }
+.menu-product div:last-child{
+  font-family:Arial, Helvetica, sans-serif;
+  color: #b68207;
+  font-weight: 900;
+  text-align: center;
+  font-size: 1.3em;
+  /* visibility: hidden; */
+}
+.order-arrow{
+  vertical-align: middle;
+
+}
 .menu-title > h4{
   margin-top: 15px;
+  margin-bottom: 4px;
   text-align: center;
   font-family:Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 2em;
   color: #451400;
 }
+
