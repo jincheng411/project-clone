@@ -4,10 +4,10 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 function Product({ name, imgUrl }) {
   const handleOnMouseEnter = () => {
     document.getElementById(`order-${imgUrl}`).style.visibility = 'visible';
-  }
+  };
   const handleOnMouseLeave = () => {
     document.getElementById(`order-${imgUrl}`).style.visibility = 'hidden';
-  }
+  };
   return (
     <div className="menu-product" onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
       <img src={process.env.PUBLIC_URL + imgUrl} alt="product" />

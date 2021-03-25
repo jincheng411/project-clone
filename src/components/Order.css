@@ -19,7 +19,7 @@
   font-weight: 900;
   text-align: center;
   font-size: 1.3em;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 .order-arrow{
   vertical-align: middle;
