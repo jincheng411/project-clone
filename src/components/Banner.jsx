@@ -14,7 +14,7 @@ function Banner() {
         </div>
         <div className="promo-btn"><button>ORDER NOW</button></div>
         <div className="promo-text-line2">
-          <p>Not available to order in-restaurant.</p>
+          <small>Not available to order in-restaurant.</small>
         </div>
       </div>
     </div>
