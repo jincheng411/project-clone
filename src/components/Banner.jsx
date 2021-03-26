@@ -4,7 +4,7 @@ import './Banner.css';
 function Banner() {
   return (
     <div className="banner">
-      <video autoplay="autoplay" loop="loop" muted="muted" playsinline webkit-playsinline className="video-banner" src="https://www.chipotle.com/content/dam/poc/order/images/promo-banners/qd/v3-2300x520-Quesadilla-R7.mp4" />
+      <video autoPlay="autoplay" loop="loop" muted="muted" playsInline={true} webkit-playsinline="true" className="video-banner" src="https://www.chipotle.com/content/dam/poc/order/images/promo-banners/qd/v3-2300x520-Quesadilla-R7.mp4" />
       <div className="promo">
         <div className="promo-text-line1">
           <p>
