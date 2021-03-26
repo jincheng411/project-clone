@@ -12,10 +12,8 @@
     flex: 1, 1, 100%;
     flex-flow: column;
     flex-wrap: wrap;
-
   }
 }
-
 
 .menu-product {
   flex:30%;
