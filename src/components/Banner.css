@@ -1,11 +1,9 @@
 .video-banner {
   width: 100vw;
-  margin: -8px;
   object-fit:cover;
   height: 100%;
-  /* width: 100%; */
   min-height: 450px;
-  /* position: absolute; */
+  border-bottom: 1px solid #d4cbc7;
 }
 
 .banner{
@@ -14,7 +12,6 @@
 }
 
 .promo{
-  /* flex:0.7; */
   width: 80%;
   position: absolute;
   top: 35%;
