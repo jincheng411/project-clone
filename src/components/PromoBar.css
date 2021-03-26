@@ -1,0 +1,12 @@
+.promo-bar{
+  min-height: 80px;
+  border-bottom: 1px solid #d4cbc7;
+}
+.promo-bar-content{
+  display: flex;
+  /* flex-direction: row; */
+  width: 85%;
+}
+.promo-bar-account{
+  display: flex;
+}

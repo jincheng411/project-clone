@@ -16,7 +16,7 @@ function Navbar() {
         </div>
       </div>
       <div className="mid-section">
-        <img src="/image/pepper-small.svg" />
+        <img src="/image/pepper-small.svg" alt="pepper" />
         <span className="separator" />
         <div className="mid-section-text">
           <p>pickup from</p>

@@ -38,6 +38,8 @@
   font-size: 0.8em;
   color:#786259;
   margin-left: 5px;
+  letter-spacing: 1px;
+
 }
 .sign-in-icon{
   font-size: 2.3em !important;
@@ -54,6 +56,7 @@
   height: 40px;
   min-width: 200px;
   font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }
 .separator{
   border-right: 1px solid #451400;
@@ -91,4 +94,5 @@
 .bag-icon{
   font-size: 2em !important;
   color:#451400;
+  cursor: pointer;
 }
