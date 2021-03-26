@@ -1,0 +1,29 @@
+.navbar{
+  display: flex;
+  height: 65px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}
+.right-section{
+  align-items: flex-end;
+}
+.left-section{
+  display: flex;
+  align-items: center;
+}
+
+.left-section>img{
+  height: 55px;
+}
+.subject{
+  font-size: 80px;
+}
+
+.mid-section{
+  flex: 1;
+}
