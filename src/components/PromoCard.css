@@ -13,7 +13,41 @@
 }
 .promo-card-left{
   flex: 50%;
+  display: flex;
+  flex-direction: column;
+  margin:0 20px;
+  font-family:Arial, Helvetica, sans-serif;
 }
+.promo-card-left>h2{
+  font-size: 2em;
+  color: #451400;
+  font-weight: 900;
+  line-height: 30px;
+  transform: scale(1, 1.3);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.promo-card-left>span{
+  font-size: 0.9em;
+  color: white;
+  background-color: #451400;
+  font-weight: 900;
+  transform: scale(1, 1.3);
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: auto;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.promo-card-left-description{
+  margin-left: 5px;
+  color: #451400;
+  font-weight:lighter;
+  line-height: 25px;
+}
+
 .promo-card-right{
   flex: 50%;
   height: 425px;

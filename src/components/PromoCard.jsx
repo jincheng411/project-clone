@@ -6,7 +6,9 @@ function PromoCard({ title, description, url }) {
     <div className="promo-card">
       <div className="promo-card-left">
         <h2>{title}</h2>
-        <p>{description}</p>
+        <div className="promo-card-left-description">
+          <p>{description}</p>
+        </div>
         <span>order now</span>
       </div>
       <div className="promo-card-right">
