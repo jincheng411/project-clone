@@ -17,11 +17,14 @@ function Navbar() {
       </div>
       <div className="mid-section">
         <img src="/image/pepper-small.svg" />
-        <p>pickup from</p>
-        <small>185 7th Ave</small>
+        <span className="separator" />
+        <div className="mid-section-text">
+          <p>pickup from</p>
+          <small>185 7th Ave</small>
+        </div>
       </div>
       <div className="right-section">
-        <LocalMallOutlinedIcon />
+        <LocalMallOutlinedIcon className="bag-icon" />
       </div>
     </div>
   )
