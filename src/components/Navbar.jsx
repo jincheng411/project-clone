@@ -8,11 +8,12 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="left-section">
-        <div className="subject">
-          <SubjectIcon />
-        </div>
+        <SubjectIcon className="subject" />
         <img src="/image/logo.svg" />
-        <PersonOutlineIcon />
+        <div className="sign-in">
+          <PersonOutlineIcon className="sign-in-icon" />
+          <p>SIGN IN</p>
+        </div>
       </div>
       <div className="mid-section">
         <img src="/image/pepper-small.svg" />
