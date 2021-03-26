@@ -1,7 +1,21 @@
 .menu-list {
+  margin: 20px 0;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  flex: 0, 1, 33%;
 }
+@media (max-width: 1024px) {
+  .menu-list{
+    max-width: 1200px;
+    align-items: center;
+    flex: 1, 1, 100%;
+    flex-flow: column;
+    flex-wrap: wrap;
+
+  }
+}
+
 
 .menu-product {
   flex:30%;
