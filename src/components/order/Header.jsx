@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './Header.css'
 function Header({ product }) {
   return (
-    <div className="header">
+    <div className="order-header">
       <div className="header-left">
         <img src={product.url} />
       </div>
