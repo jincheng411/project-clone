@@ -1,6 +1,7 @@
 import React from 'react';
 import menu from '../../menu';
 import Product from './Product.jsx';
+
 import './Menu.css';
 
 function Menu() {
