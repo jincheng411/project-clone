@@ -1,9 +1,9 @@
 import React from 'react';
-import menu from './menu';
+import menu from '../../menu';
 import Product from './Product.jsx';
-import './Order.css';
+import './Menu.css';
 
-function Order() {
+function Menu() {
   return (
     <div className="menu-list">
       {menu.map((item) => <Product key={item.name} name={item.name} imgUrl={item.url} />)}
@@ -11,4 +11,4 @@ function Order() {
   );
 }
 
-export default Order;
+export default Menu;
