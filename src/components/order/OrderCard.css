@@ -1,0 +1,50 @@
+.order-card{
+  display: flex;
+  border: 1px solid #d4cbc7;
+  width: 470px;
+  height: 142px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  flex-basis: 50%;
+}
+.order-card>img{
+  position: absolute;
+  left: -50px;
+  height: 140%;
+  object-fit: cover;
+}
+.order-card-content{
+  margin-left: 35%;
+}
+.order-card-content>h2{
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: #451400;
+}
+.order-card-content>p{
+  text-transform: capitalize;
+  color: #786259;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+.cost-and-cal{
+  display: flex;
+  color: #786259;
+  font-weight: 600;
+}
+.cost{
+  margin-right: 30px;
+
+}
+.more-option{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  color: grey;
+  width: 60px;
+  height: 50px;
+}

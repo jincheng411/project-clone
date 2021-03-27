@@ -9,6 +9,8 @@ function Section() {
       <span>choose up to two</span>
       <div className="order-cards">
         <OrderCard />
+        <OrderCard />
+
       </div>
     </div>
   );
