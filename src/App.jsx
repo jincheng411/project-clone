@@ -4,6 +4,7 @@ import Banner from './components/Banner.jsx';
 import Navbar from './components/Navbar.jsx';
 import PromoBar from './components/PromoBar.jsx';
 import PromoCard from './components/PromoCard.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <PromoCard title="FIND YOUR PLANT POWER" description="Try our New Fajita Veggie Quesadilla (only available online) or enjoy your fave Veggie and Sofritas entrées with Cilantro-Lime Cauliflower Rice. Pro tip: Guac isn’t extra when you go veggie." url="https://www.chipotle.com/content/dam/poc/order/images/secondary-promo-banners/pb/Tout_Desktop-image@2x.jpg" />
 
       </div>
+      <Footer />
     </div>
   );
 }
