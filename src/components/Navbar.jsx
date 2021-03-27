@@ -3,13 +3,14 @@ import './Navbar.css';
 import SubjectIcon from '@material-ui/icons/Subject';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <div className="navbar">
       <div className="left-section">
         <SubjectIcon className="subject" />
-        <img src="/image/logo.svg" />
+        <Link to="/"><img src="/image/logo.svg" alt="logo" /></Link>
         <div className="sign-in">
           <PersonOutlineIcon className="sign-in-icon" />
           <p>SIGN IN</p>
