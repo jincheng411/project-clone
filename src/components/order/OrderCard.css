@@ -1,13 +1,15 @@
 .order-card{
   display: flex;
   border: 1px solid #d4cbc7;
-  width: 470px;
+  min-width: 470px;
+  max-width: 470px;
   height: 142px;
   align-items: center;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  flex-basis: 50%;
+  flex: 470px;
+  margin: 15px;
 }
 .order-card>img{
   position: absolute;
