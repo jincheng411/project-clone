@@ -4,13 +4,11 @@
   flex-wrap: wrap;
 }
 .order-section-title{
-  margin-top: 15px;
   display: flex;
   flex-direction: column;
-  width: 1200px;
-  margin-left: 60px;
+  /* width: 1100px; */
+  margin-left: 65px;
   color: #451400;
-
 }
 .order-section-title>h1{
   text-transform: uppercase;
@@ -24,6 +22,45 @@
 
 .order-section{
   width: 1100px;
+  margin-top: 20px;
+  margin-bottom: 35px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .order-cards{
+    flex-direction: column;
+  }
+  .order-card{
+    display: flex;
+    border: 1px solid #d4cbc7;
+    width: 100%;
+    height: 100px;
+    /* align-items: center; */
+    position: relative;
+    /* flex: 470px; */
+    margin: 0;
+  }
+  .order-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: none;
+    justify-content: center;
+  }
+  .order-section{
+    width: 100vw;
+  }
+  .order{
+    max-width: 100vw;
+  }
+  .order-section-title{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: 35px;
+    color: #451400;
+  }
+
 }

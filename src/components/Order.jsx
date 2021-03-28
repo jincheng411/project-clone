@@ -9,6 +9,8 @@ function Order() {
     <div className="order">
       <Header product={menu[1]} />
       <Section />
+      <Section />
+      <Section />
     </div>
   );
 }
