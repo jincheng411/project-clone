@@ -6,8 +6,8 @@ function Section() {
   return (
     <div className="order-section">
       <div className="order-section-title">
-        <h1>pretein or veggie</h1>
-        <span>choose up to two</span>
+        <h1>protein or veggie</h1>
+        <span>Choose up to two.</span>
       </div>
       <div className="order-cards">
         <OrderCard />

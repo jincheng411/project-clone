@@ -4,14 +4,26 @@
   flex-wrap: wrap;
 }
 .order-section-title{
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   width: 1200px;
   margin-left: 60px;
+  color: #451400;
+
 }
+.order-section-title>h1{
+  text-transform: uppercase;
+  font-size: 1.3em;
+  transform: scale(1, 1.3);
+  letter-spacing: 1px;
+}
+.order-section-title>span{
+  color:#786259;
+}
+
 .order-section{
   width: 1100px;
   display: flex;
   flex-direction: column;
-
 }
