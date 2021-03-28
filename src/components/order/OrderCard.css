@@ -1,8 +1,9 @@
 .order-card{
   display: flex;
   border: 1px solid #d4cbc7;
-  min-width: 470px;
-  max-width: 470px;
+  /* min-width: 470px;
+  max-width: 470px; */
+  width: 470px;
   height: 142px;
   align-items: center;
   position: relative;
