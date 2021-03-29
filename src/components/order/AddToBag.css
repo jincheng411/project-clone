@@ -20,8 +20,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .add-to-bag-btn>h2{
   color: white;
   font-size: 1.3em;
+}
+
+@media(max-width: 1024px){
+  .add-to-bag{
+    background-color: #451400;
+  }
+  .meal-summary{
+    display: none;
+  }
+  .add-to-bag-btn{
+    margin-left: 0;
+    height: 65px;
+  }
 }
