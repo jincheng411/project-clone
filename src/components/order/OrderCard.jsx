@@ -2,9 +2,13 @@ import React from 'react';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import './OrderCard.css';
 
-function OrderCard() {
+function OrderCard({item}) {
+  const handleOnMouseEnter = (e) => {
+    console.log(e.target.id)
+  }
   return (
-    <div className="order-card">
+    <div className="order-card" id={item} onMouseEnter={handleOnMouseEnter}>
+      <div className="hover-effect"></div>
       <img src="https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6601-chicken/web-mobile/order.png" alt="section" />
       <div className="order-card-content">
         <h2>chicken</h2>

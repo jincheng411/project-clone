@@ -10,10 +10,10 @@ function Section() {
         <span>Choose up to two.</span>
       </div>
       <div className="order-cards">
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
+        <OrderCard item='chicken' />
+        <OrderCard item='steak'/>
+        <OrderCard item='veggie'/>
+        <OrderCard item='sofritas'/>
       </div>
     </div>
   );
