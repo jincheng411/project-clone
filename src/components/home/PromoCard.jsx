@@ -9,7 +9,7 @@ function PromoCard({ title, description, url }) {
         <div className="promo-card-left-description">
           <p>{description}</p>
         </div>
-        <span>order now</span>
+        <span onClick={() => window.location.href="#order"}>order now</span>
       </div>
       <div className="promo-card-right">
         <img src={url} alt="promo" />

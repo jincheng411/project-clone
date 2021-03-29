@@ -4,7 +4,13 @@
   justify-content: center;
   flex-wrap: wrap;
   flex: 0, 1, 33%;
+  position: relative;
 }
+.menu-list>span{
+  position: absolute;
+  top: -95px;
+}
+
 @media (max-width: 1024px) {
   .menu-list{
     max-width: 1200px;
