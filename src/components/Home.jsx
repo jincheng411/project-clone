@@ -6,7 +6,7 @@ import PromoCard from './home/PromoCard.jsx';
 import Footer from './home/Footer.jsx';
 
 function Home() {
-  return(
+  return (
     <div>
       <Banner />
       <PromoBar />
@@ -18,7 +18,7 @@ function Home() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default Home;
