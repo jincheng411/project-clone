@@ -96,3 +96,14 @@
   color:#451400;
   cursor: pointer;
 }
+
+@media (max-width: 576px) {
+  .sign-in{
+    display: none;
+  }
+}
+@media (max-width: 374px) {
+  .left-section>a>img{
+    display: none;
+  }
+}
