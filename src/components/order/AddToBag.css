@@ -1,0 +1,27 @@
+.add-to-bag{
+  display: flex;
+  padding: 0 10%;
+  justify-content: center;
+  background-color: #f7f2ed;
+  align-items: center;
+}
+.meal-summary{
+  color: #451400;
+  margin-bottom: 15px;
+}
+.meal-summary>h3{
+  margin-bottom: 0;
+}
+.add-to-bag-btn{
+  margin-left: auto;
+  background-color: #451400;
+  width: 300px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-to-bag-btn>h2{
+  color: white;
+  font-size: 1.3em;
+}
