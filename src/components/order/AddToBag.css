@@ -4,6 +4,10 @@
   justify-content: center;
   background-color: #f7f2ed;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  z-index: 3
 }
 .meal-summary{
   color: #451400;

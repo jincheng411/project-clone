@@ -5,5 +5,10 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-
+  margin-bottom: 120px;
+}
+@media(max-width: 1024px){
+  .order{
+    margin-bottom: 60px;
+  }
 }
