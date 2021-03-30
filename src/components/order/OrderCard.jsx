@@ -1,6 +1,7 @@
 import React, {useState}from 'react';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import CustomizeTab from './CustomizeTab.jsx';
+import AmountTab from './AmountTab.jsx';
 import './OrderCard.css';
 
 function OrderCard({item}) {
@@ -26,6 +27,7 @@ function OrderCard({item}) {
         </div>
       </div>
       <CustomizeTab isVisible={visible}/>
+      <AmountTab />
       <div className="more-option" onMouseEnter={handleOnMouseEnterOption} onMouseLeave={handleOnMouseLeaveOption}>
         <MoreVertIcon />
       </div>

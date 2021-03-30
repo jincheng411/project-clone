@@ -1,4 +1,5 @@
 import React from 'react';
+import './CustomizeTab.css'
 
 function CustomizeTab({ isVisible }) {
   return (
