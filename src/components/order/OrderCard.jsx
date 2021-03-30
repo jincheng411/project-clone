@@ -7,8 +7,7 @@ function OrderCard({item}) {
     console.log(e.target.id)
   }
   return (
-    <div className="order-card" id={item} onMouseEnter={handleOnMouseEnter}>
-      <div className="hover-effect"></div>
+    <div className="order-card ">
       <img src="https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6601-chicken/web-mobile/order.png" alt="section" />
       <div className="order-card-content">
         <h2>chicken</h2>
@@ -18,9 +17,10 @@ function OrderCard({item}) {
           <div className="cal">120 cal</div>
         </div>
       </div>
-      <div className="more-option">
+      <div className="more-option" onMouseEnter={handleOnMouseEnter} id={`${item}more`}>
         <MoreVertIcon />
       </div>
+      <div className="hover-effect" id={`${item}layover`} onMouseEnter={handleOnMouseEnter}></div>
     </div>
   );
 }

@@ -20,6 +20,12 @@
 .hover-effect:hover{
   opacity: 1;
 }
+ .more-option:hover + .hover-effect {
+  opacity: 1;
+}
+/* .hover-effect:hover> .more-option{
+  opacity: 1;
+} */
 .order-card>img{
   position: absolute;
   left: -50px;
@@ -58,4 +64,5 @@
   color: grey;
   width: 60px;
   height: 50px;
+  z-index: 2;
 }
