@@ -20,24 +20,15 @@
 .hover-effect:hover{
   opacity: 1;
 }
-.customize-tab{
-  position: absolute;
-  clip-path: polygon(0% 20%, 82% 21%, 82% 40%, 85% 50%, 82% 61%, 82% 80%, 0 80%);
-  left: 240px;
-  background-color: #451400;
-  color: white;
-  font-size: 0.9em;
-  padding: 22px;
-  padding-right: 48px;
-  font-weight: 600;
-  visibility: hidden;
-  z-index: 3;
-}
-.customize-tab-visible{
-  visibility: visible;
-}
- .more-option:hover + .hover-effect {
+
+.amount-tab:hover ~ .hover-effect {
   opacity: 1;
+}
+.more-option:hover ~ .hover-effect {
+  opacity: 1;
+}
+.amount{
+  z-index: 2;
 }
 /* .hover-effect:hover> .more-option{
   opacity: 1;

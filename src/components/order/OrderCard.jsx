@@ -5,15 +5,15 @@ import AmountTab from './AmountTab.jsx';
 import './OrderCard.css';
 
 function OrderCard({item}) {
-  const [visible, setVisible] = useState(false);
+  const [optionTabVisible, setOptionTabVisible] = useState(false);
   const handleOnMouseEnter = (e) => {
     console.log(e.target.id)
   }
   const handleOnMouseEnterOption = () => {
-    setVisible(true);
+    setOptionTabVisible(true);
   }
   const handleOnMouseLeaveOption = () => {
-    setVisible(false);
+    setOptionTabVisible(false);
   }
   return (
     <div className="order-card ">
@@ -26,8 +26,8 @@ function OrderCard({item}) {
           <div className="cal">120 cal</div>
         </div>
       </div>
-      <CustomizeTab isVisible={visible}/>
-      <AmountTab />
+      <CustomizeTab isVisible={optionTabVisible}/>
+      <AmountTab amount={'1'}/>
       <div className="more-option" onMouseEnter={handleOnMouseEnterOption} onMouseLeave={handleOnMouseLeaveOption}>
         <MoreVertIcon />
       </div>

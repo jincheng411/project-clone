@@ -1,7 +1,7 @@
 .customize-tab{
   position: absolute;
   clip-path: polygon(0% 20%, 82% 21%, 82% 40%, 85% 50%, 82% 61%, 82% 80%, 0 80%);
-  left: 240px;
+  left: 220px;
   background-color: #451400;
   color: white;
   font-size: 0.9em;
