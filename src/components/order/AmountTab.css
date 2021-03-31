@@ -1,0 +1,16 @@
+.amount-tab{
+  position: absolute;
+  left: 40px;
+  background-color: #b68207;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5rem;
+  border: 2px solid white;
+  font-weight: 500;
+  z-index: 2;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

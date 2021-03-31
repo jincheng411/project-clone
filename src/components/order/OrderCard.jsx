@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useState}from 'react';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import CustomizeTab from './CustomizeTab.jsx';
+import AmountTab from './AmountTab.jsx';
 import './OrderCard.css';
 
 function OrderCard({item}) {
+  const [optionTabVisible, setOptionTabVisible] = useState(false);
   const handleOnMouseEnter = (e) => {
     console.log(e.target.id)
+  }
+  const handleOnMouseEnterOption = () => {
+    setOptionTabVisible(true);
+  }
+  const handleOnMouseLeaveOption = () => {
+    setOptionTabVisible(false);
   }
   return (
     <div className="order-card ">
@@ -17,7 +26,9 @@ function OrderCard({item}) {
           <div className="cal">120 cal</div>
         </div>
       </div>
-      <div className="more-option" onMouseEnter={handleOnMouseEnter} id={`${item}more`}>
+      <CustomizeTab isVisible={optionTabVisible}/>
+      <AmountTab amount={'1'}/>
+      <div className="more-option" onMouseEnter={handleOnMouseEnterOption} onMouseLeave={handleOnMouseLeaveOption}>
         <MoreVertIcon />
       </div>
       <div className="hover-effect" id={`${item}layover`} onMouseEnter={handleOnMouseEnter}></div>

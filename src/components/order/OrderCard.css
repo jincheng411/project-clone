@@ -20,8 +20,15 @@
 .hover-effect:hover{
   opacity: 1;
 }
- .more-option:hover + .hover-effect {
+
+.amount-tab:hover ~ .hover-effect {
   opacity: 1;
+}
+.more-option:hover ~ .hover-effect {
+  opacity: 1;
+}
+.amount{
+  z-index: 2;
 }
 /* .hover-effect:hover> .more-option{
   opacity: 1;
