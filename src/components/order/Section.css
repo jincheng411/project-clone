@@ -97,5 +97,7 @@
   .customize-tab{
     display:none;
   }
-
+  .hover-effect{
+    background-color: rgba(0,0,0,0) !important ;
+  }
 }

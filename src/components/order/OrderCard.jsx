@@ -10,9 +10,9 @@ function OrderCard({item}) {
   const [amountTabVisible, setAmountTabVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
-  const handleOnMouseEnter = (e) => {
-    console.log(e.target.id)
-  }
+  // const handleOnMouseEnter = (e) => {
+  //   console.log(e.target.id)
+  // }
   const handleOnMouseEnterOption = () => {
     setOptionTabVisible(true);
   }
@@ -25,7 +25,6 @@ function OrderCard({item}) {
   }
   const handleOptionsClick = () => {
     setOptionsVisible(!optionsVisible);
-    console.log('aaaa')
   }
   return (
     <div className={`order-card ${isSelected && "card-selected"}`}>
@@ -44,7 +43,7 @@ function OrderCard({item}) {
         <MoreVertIcon />
       </div>
       <ItemOptions options={[{name: 'normal'}, {name: 'double', note: '+$3.15'}]} isVisible={optionsVisible} clickToClose={handleOptionsClick}/>
-      <div className="hover-effect" id={`${item}layover`} onMouseEnter={handleOnMouseEnter} onClick={handleAmountTab}></div>
+      <div className="hover-effect" id={`${item}layover`} onClick={handleAmountTab}></div>
     </div>
   );
 }

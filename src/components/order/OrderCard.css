@@ -68,7 +68,6 @@
   visibility: visible;
 }
 @media (min-width: 1025px){
-
   .card-selected{
     border: 2px solid #a76721;
   }

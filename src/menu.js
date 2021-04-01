@@ -38,4 +38,89 @@ const menu = [
     description: 'Your choice of meat, guacamole or queso, and two toppings to go with a pair of crispy corn or soft flour tortillas. Includes fruit or kid\'s chips and organic juice or milk.',
   },
 ];
+export const products = [
+  {
+    name: 'burrito',
+    items: [
+      {
+        name: 'chicken',
+        price: ['9.25', '12.40'],
+        cal: '180',
+        option: [
+          {
+            name: 'normal',
+          },
+          {
+            name: 'double',
+            note: '+$3.15'
+          }
+        ]
+      },
+      {
+        name: 'steak',
+        price: ['10.35', '14.85'],
+        cal: '150',
+        option: [
+          {
+            name: 'normal',
+          },
+          {
+            name: 'double',
+            note: '+$4.50'
+          }
+        ]
+      },
+      {
+        name: 'barbacoa',
+        price: ['10.35', '14.85'],
+        cal: '170',
+        option: [
+          {
+            name: 'normal',
+          },
+          {
+            name: 'double',
+            note: '+$4.50'
+          }
+        ]
+      },
+      {
+        name: 'carnitas',
+        price: ['9.75', '13.40'],
+        cal: '210',
+        option: [
+          {
+            name: 'normal',
+          },
+          {
+            name: 'double',
+            note: '+$3.65'
+          }
+        ]
+      },
+      {
+        name: 'sofritas',
+        price: ['9.25', '12.40'],
+        cal: '150',
+        description: 'plant-based protein',
+        option: [
+          {
+            name: 'normal',
+          },
+          {
+            name: 'double',
+            note: '+$3.15',
+          }
+        ]
+      },
+      {
+        name: 'veggie',
+        price: ['9.25'],
+        cal: '20',
+        description: 'plant-based protein',
+        option: [],
+      },
+    ]
+  }
+]
 export default menu;
