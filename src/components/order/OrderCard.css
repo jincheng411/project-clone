@@ -8,6 +8,7 @@
   overflow: hidden;
   cursor: pointer;
   margin: 15px;
+  box-sizing: border-box;
 }
 .hover-effect{
   background-color: rgba(247,242,237,.8) ;
@@ -65,4 +66,10 @@
 }
 .tab-visible{
   visibility: visible;
+}
+@media (min-width: 1025px){
+
+  .card-selected{
+    border: 2px solid #a76721;
+  }
 }

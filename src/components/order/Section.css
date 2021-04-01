@@ -42,7 +42,7 @@
   }
   .order-cards div:last-child{
     border-bottom: none;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
   }
   .order-header{
     flex-direction: column;
