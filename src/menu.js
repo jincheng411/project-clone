@@ -53,7 +53,7 @@ export const products = [
             price: ['9.25', '12.40'],
             cal: '180',
             img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6601-chicken/web-mobile/order.png',
-            option: [
+            options: [
               {
                 name: 'normal',
               },
@@ -68,7 +68,7 @@ export const products = [
             price: ['10.35', '14.85'],
             cal: '150',
             img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6602-steak/web-mobile/order.png',
-            option: [
+            options: [
               {
                 name: 'normal',
               },
@@ -83,7 +83,7 @@ export const products = [
             price: ['10.35', '14.85'],
             cal: '170',
             img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6604-barbacoa/web-mobile/order.png',
-            option: [
+            options: [
               {
                 name: 'normal',
               },
@@ -98,7 +98,7 @@ export const products = [
             price: ['9.75', '13.40'],
             cal: '210',
             img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6603-carnitas/web-mobile/order.png',
-            option: [
+            options: [
               {
                 name: 'normal',
               },
@@ -114,7 +114,7 @@ export const products = [
             cal: '150',
             description: 'plant-based protein',
             img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6605-sofritas/web-mobile/order.png',
-            option: [
+            options: [
               {
                 name: 'normal',
               },
@@ -130,7 +130,7 @@ export const products = [
             cal: '20',
             description: 'includes guacamole',
             img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5301-guacamole/web-mobile/order.png',
-            option: [],
+            options: [],
           },
         ]
       }
