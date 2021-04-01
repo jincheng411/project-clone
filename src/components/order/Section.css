@@ -94,4 +94,8 @@
     font-weight: lighter;
     line-height: 22px;
   }
+  .customize-tab{
+    display:none;
+  }
+
 }
