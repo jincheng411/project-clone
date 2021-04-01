@@ -2,18 +2,18 @@ import React from 'react';
 import './Section.css';
 import OrderCard from './OrderCard.jsx';
 
-function Section() {
+function Section({ section }) {
+  const items = section.items;
   return (
     <div className="order-section">
       <div className="order-section-title">
-        <h1>protein or veggie</h1>
-        <span>Choose up to two.</span>
+        <h1>{section.name}</h1>
+        <span>{section.note}</span>
       </div>
       <div className="order-cards">
-        <OrderCard item='chicken' />
-        <OrderCard item='steak'/>
-        <OrderCard item='veggie'/>
-        <OrderCard item='sofritas'/>
+        {items.map((item) =>
+          <OrderCard item={item} key={item.name} />
+        )}
       </div>
     </div>
   );

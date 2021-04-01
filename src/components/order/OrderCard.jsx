@@ -28,10 +28,10 @@ function OrderCard({item}) {
   }
   return (
     <div className={`order-card ${isSelected && "card-selected"}`}>
-      <img src="https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6601-chicken/web-mobile/order.png" alt="section" />
+      <img src={item.img} alt="section" />
       <div className="order-card-content">
-        <h2>chicken</h2>
-        <p>chicken protein</p>
+        <h2>{item.name}</h2>
+        <p>{item.description}</p>
         <div className="cost-and-cal">
           <div className="cost">$9.25</div>
           <div className="cal">120 cal</div>
@@ -43,7 +43,7 @@ function OrderCard({item}) {
         <MoreVertIcon />
       </div>
       <ItemOptions options={[{name: 'normal'}, {name: 'double', note: '+$3.15'}]} isVisible={optionsVisible} clickToClose={handleOptionsClick}/>
-      <div className="hover-effect" id={`${item}layover`} onClick={handleAmountTab}></div>
+      <div className="hover-effect" onClick={handleAmountTab}></div>
     </div>
   );
 }

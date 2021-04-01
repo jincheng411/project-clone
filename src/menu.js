@@ -40,87 +40,102 @@ const menu = [
 ];
 export const products = [
   {
-    name: 'burrito',
-    items: [
+    name: 'burrito bowl',
+    url: '/image/bowl.jpeg',
+    description: 'Your choice of freshly grilled meat or sofritas served in a delicious bowl with rice, beans, or fajita veggies, and topped with guac, salsa, queso blanco, sour cream or cheese.',
+    sections: [
       {
-        name: 'chicken',
-        price: ['9.25', '12.40'],
-        cal: '180',
-        option: [
+        name: 'protein or veggie',
+        note: 'Choose up to two.',
+        items: [
           {
-            name: 'normal',
+            name: 'chicken',
+            price: ['9.25', '12.40'],
+            cal: '180',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6601-chicken/web-mobile/order.png',
+            option: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'double',
+                note: '+$3.15'
+              }
+            ]
           },
           {
-            name: 'double',
-            note: '+$3.15'
-          }
-        ]
-      },
-      {
-        name: 'steak',
-        price: ['10.35', '14.85'],
-        cal: '150',
-        option: [
-          {
-            name: 'normal',
+            name: 'steak',
+            price: ['10.35', '14.85'],
+            cal: '150',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6602-steak/web-mobile/order.png',
+            option: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'double',
+                note: '+$4.50'
+              }
+            ]
           },
           {
-            name: 'double',
-            note: '+$4.50'
-          }
-        ]
-      },
-      {
-        name: 'barbacoa',
-        price: ['10.35', '14.85'],
-        cal: '170',
-        option: [
-          {
-            name: 'normal',
+            name: 'barbacoa',
+            price: ['10.35', '14.85'],
+            cal: '170',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6604-barbacoa/web-mobile/order.png',
+            option: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'double',
+                note: '+$4.50'
+              }
+            ]
           },
           {
-            name: 'double',
-            note: '+$4.50'
-          }
-        ]
-      },
-      {
-        name: 'carnitas',
-        price: ['9.75', '13.40'],
-        cal: '210',
-        option: [
-          {
-            name: 'normal',
+            name: 'carnitas',
+            price: ['9.75', '13.40'],
+            cal: '210',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6603-carnitas/web-mobile/order.png',
+            option: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'double',
+                note: '+$3.65'
+              }
+            ]
           },
           {
-            name: 'double',
-            note: '+$3.65'
-          }
-        ]
-      },
-      {
-        name: 'sofritas',
-        price: ['9.25', '12.40'],
-        cal: '150',
-        description: 'plant-based protein',
-        option: [
-          {
-            name: 'normal',
+            name: 'sofritas',
+            price: ['9.25', '12.40'],
+            cal: '150',
+            description: 'plant-based protein',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-6605-sofritas/web-mobile/order.png',
+            option: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'double',
+                note: '+$3.15',
+              }
+            ]
           },
           {
-            name: 'double',
-            note: '+$3.15',
-          }
+            name: 'veggie',
+            price: ['9.25'],
+            cal: '20',
+            description: 'includes guacamole',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5301-guacamole/web-mobile/order.png',
+            option: [],
+          },
         ]
-      },
-      {
-        name: 'veggie',
-        price: ['9.25'],
-        cal: '20',
-        description: 'plant-based protein',
-        option: [],
-      },
+      }
     ]
+
   }
 ]
 export default menu;
