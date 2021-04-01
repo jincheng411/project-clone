@@ -13,4 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  visibility: hidden;
+}
+.amount-tab:hover ~ .hover-effect {
+  opacity: 1;
 }

@@ -8,6 +8,7 @@
   overflow: hidden;
   cursor: pointer;
   margin: 15px;
+  box-sizing: border-box;
 }
 .hover-effect{
   background-color: rgba(247,242,237,.8) ;
@@ -20,19 +21,9 @@
 .hover-effect:hover{
   opacity: 1;
 }
-
-.amount-tab:hover ~ .hover-effect {
-  opacity: 1;
-}
 .more-option:hover ~ .hover-effect {
   opacity: 1;
 }
-.amount{
-  z-index: 2;
-}
-/* .hover-effect:hover> .more-option{
-  opacity: 1;
-} */
 .order-card>img{
   position: absolute;
   left: -50px;
@@ -72,4 +63,13 @@
   width: 60px;
   height: 50px;
   z-index: 2;
+}
+.tab-visible{
+  visibility: visible;
+}
+@media (min-width: 1025px){
+
+  .card-selected{
+    border: 2px solid #a76721;
+  }
 }
