@@ -11,11 +11,14 @@ export const reducer = (state, action) => {
           order: [...state.order, action.item],
         };
       }
-    // case 'REMOVE_FROM_ORDER':
-    //   return {
-    //     ...state,
-    //     order: [...state.order, ]
-    //   }
+    case 'REMOVE_FROM_ORDER':
+      const filtered = state.order.filter((item) => {
+        return item.name !== action.name;
+      })
+      return {
+        ...state,
+        order: filtered,
+      }
     default:
       return state;
   }
