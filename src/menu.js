@@ -49,6 +49,7 @@ export const products = [
         note: 'Choose up to two.',
         items: [
           {
+            id: '001',
             name: 'chicken',
             price: ['9.25', '12.40'],
             cal: '180',
@@ -64,6 +65,7 @@ export const products = [
             ]
           },
           {
+            id: '002',
             name: 'steak',
             price: ['10.35', '14.85'],
             cal: '150',
@@ -79,6 +81,7 @@ export const products = [
             ]
           },
           {
+            id: '003',
             name: 'barbacoa',
             price: ['10.35', '14.85'],
             cal: '170',
@@ -94,6 +97,7 @@ export const products = [
             ]
           },
           {
+            id: '004',
             name: 'carnitas',
             price: ['9.75', '13.40'],
             cal: '210',
@@ -109,6 +113,7 @@ export const products = [
             ]
           },
           {
+            id: '005',
             name: 'sofritas',
             price: ['9.25', '12.40'],
             cal: '150',
@@ -125,6 +130,7 @@ export const products = [
             ]
           },
           {
+            id: '006',
             name: 'veggie',
             price: ['9.25'],
             cal: '20',

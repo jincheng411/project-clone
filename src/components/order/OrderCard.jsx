@@ -3,9 +3,11 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import CustomizeTab from './CustomizeTab.jsx';
 import AmountTab from './AmountTab.jsx';
 import ItemOptions from './ItemOptions.jsx';
+import { useStateValue } from '../../StateProvider.js'
 import './OrderCard.css';
 
 function OrderCard({ item }) {
+  const [state, dispatch] = useStateValue();
   const [optionTabVisible, setOptionTabVisible] = useState(false);
   const [amountTabVisible, setAmountTabVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
@@ -22,6 +24,15 @@ function OrderCard({ item }) {
   const handleAmountTab = () => {
     setAmountTabVisible(!amountTabVisible);
     setIsSelected(!isSelected);
+    dispatch({
+      type: 'ADD_TO_ORDER',
+      item: {
+              name: item.name,
+              price: Number(item.price[0]),
+              option: item.options.length > 0 ? item.options[0].name : undefined
+            },
+    })
+    console.log(state.order)
   }
   const handleOptionsClick = () => {
     setOptionsVisible(!optionsVisible);
