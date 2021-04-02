@@ -51,7 +51,7 @@ function OrderCard({ item }) {
       setExcessTabVisible(true);
       setTimeout(() => {
         setExcessTabVisible(false);
-      }, 2500)
+      }, 2200)
     }
     console.log(state.order)
   }

@@ -13,7 +13,15 @@
   z-index: 3;
   display: flex;
   align-items: center;
-
+}
+@media(max-width: 1024px) {
+  .excess-tab{
+    left: 80px;
+  }
+}
+.fade-in-out {
+  -webkit-animation: fadeInAndOut 2.5s ease;
+  animation: fadeInAndOut 2.5s ease;
 }
 @keyframes fadeInAndOut {
   0% {
@@ -27,15 +35,3 @@
     visibility: hidden;
   }
 }
-.fade-in-out {
-  -webkit-animation: fadeInAndOut 2.5s ease;
-  animation: fadeInAndOut 2.5s ease;
-}
-/* @keyframes fadeIn {
-  0%   {opacity: 0;}
-  100% {opacity: 1;}
-}
-@-webkit-keyframes fadeIn {
-  0%   {opacity: 0;}
-  100% {opacity: 1;}
-} */
