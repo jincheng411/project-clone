@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import CustomizeTab from './CustomizeTab.jsx';
+import ExcessTab from './ExcessTab.jsx';
 import AmountTab from './AmountTab.jsx';
 import ItemOptions from './ItemOptions.jsx';
+import { useStateValue } from '../../StateProvider.js'
 import './OrderCard.css';
 
 function OrderCard({ item }) {
+  const [state, dispatch] = useStateValue();
   const [optionTabVisible, setOptionTabVisible] = useState(false);
+  const [excessTabVisible, setExcessTabVisible] = useState(false);
   const [amountTabVisible, setAmountTabVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
@@ -19,9 +23,37 @@ function OrderCard({ item }) {
   const handleOnMouseLeaveOption = () => {
     setOptionTabVisible(false);
   }
-  const handleAmountTab = () => {
-    setAmountTabVisible(!amountTabVisible);
-    setIsSelected(!isSelected);
+  const handleOnClick = () => {
+    for (let orderItem of state.order) {
+      if (orderItem.name === item.name) {
+        dispatch({
+          type: 'REMOVE_FROM_ORDER',
+          name: item.name,
+        })
+        setAmountTabVisible(!amountTabVisible);
+        setIsSelected(!isSelected);
+        return;
+      }
+    }
+    if (state.order.length < 2) {
+      setAmountTabVisible(!amountTabVisible);
+      setIsSelected(!isSelected);
+      dispatch({
+        type: 'ADD_TO_ORDER',
+        item: {
+          name: item.name,
+          price: Number(item.price[0]),
+          option: item.options.length > 0 ? item.options[0].name : undefined
+        },
+      })
+      return;
+    } else {
+      setExcessTabVisible(true);
+      setTimeout(() => {
+        setExcessTabVisible(false);
+      }, 2500)
+    }
+    console.log(state.order)
   }
   const handleOptionsClick = () => {
     setOptionsVisible(!optionsVisible);
@@ -38,7 +70,9 @@ function OrderCard({ item }) {
         </div>
       </div>
       <CustomizeTab isVisible={optionTabVisible} />
-      <AmountTab amount={'1'} isVisible={amountTabVisible} hideAmount={handleAmountTab} />
+      <ExcessTab isVisible={excessTabVisible} />
+
+      <AmountTab amount={state.order.length === 2 ? '1/2' : '1'} isVisible={amountTabVisible} hideAmount={handleOnClick} />
 
       {/* -----more option ----- */}
       {item.options.length > 0 && <div className="more-option" onMouseEnter={handleOnMouseEnterOption} onMouseLeave={handleOnMouseLeaveOption} onClick={handleOptionsClick} >
@@ -46,7 +80,7 @@ function OrderCard({ item }) {
       </div>}
       <ItemOptions options={item.options} isVisible={optionsVisible} clickToClose={handleOptionsClick} />
 
-      <div className="hover-effect" onClick={handleAmountTab}></div>
+      <div className="hover-effect" onClick={handleOnClick}></div>
     </div>
   );
 }
