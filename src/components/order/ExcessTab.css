@@ -1,0 +1,41 @@
+.excess-tab{
+  position: absolute;
+  left: 120px;
+  width: 200px;
+  height: 10px;
+  background-color: #451400;
+  color: white;
+  font-size: 1rem;
+  padding: 15px;
+  font-weight: 100;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+
+}
+@keyframes fadeInAndOut {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  45% {opacity: 1;}
+  65% {opacity: 1;}
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.fade-in-out {
+  -webkit-animation: fadeInAndOut 2.5s ease;
+  animation: fadeInAndOut 2.5s ease;
+}
+/* @keyframes fadeIn {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+} */

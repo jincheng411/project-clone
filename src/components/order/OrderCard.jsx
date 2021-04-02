@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import CustomizeTab from './CustomizeTab.jsx';
+import ExcessTab from './ExcessTab.jsx';
 import AmountTab from './AmountTab.jsx';
 import ItemOptions from './ItemOptions.jsx';
 import { useStateValue } from '../../StateProvider.js'
@@ -9,6 +10,7 @@ import './OrderCard.css';
 function OrderCard({ item }) {
   const [state, dispatch] = useStateValue();
   const [optionTabVisible, setOptionTabVisible] = useState(false);
+  const [excessTabVisible, setExcessTabVisible] = useState(false);
   const [amountTabVisible, setAmountTabVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
@@ -22,7 +24,6 @@ function OrderCard({ item }) {
     setOptionTabVisible(false);
   }
   const handleOnClick = () => {
-    console.log(state.order.length)
     for (let orderItem of state.order) {
       if (orderItem.name === item.name) {
         dispatch({
@@ -47,7 +48,10 @@ function OrderCard({ item }) {
       })
       return;
     } else {
-      console.log('more than 2')
+      setExcessTabVisible(true);
+      setTimeout(() => {
+        setExcessTabVisible(false);
+      }, 2500)
     }
     console.log(state.order)
   }
@@ -66,6 +70,7 @@ function OrderCard({ item }) {
         </div>
       </div>
       <CustomizeTab isVisible={optionTabVisible} />
+      <ExcessTab isVisible={excessTabVisible} />
 
       <AmountTab amount={state.order.length === 2 ? '1/2' : '1'} isVisible={amountTabVisible} hideAmount={handleOnClick} />
 
