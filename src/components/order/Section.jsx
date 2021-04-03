@@ -8,7 +8,7 @@ function Section({ section }) {
     <div className="order-section">
       <div className="order-section-title">
         <h1>{section.name}</h1>
-        <span>{section.note}</span>
+        {section.note && <span>{section.note}</span>}
       </div>
       <div className="order-cards">
         {items.map((item) =>

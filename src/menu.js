@@ -139,8 +139,71 @@ export const products = [
             options: [],
           },
         ]
+      },
+      {
+        name: 'rice',
+        items: [
+          {
+            name: 'white rice',
+            cal: '210',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5001-white-rice/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+          {
+            name: 'brown rice',
+            cal: '210',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5002-brown-rice/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+          {
+            name: 'cauliflower rice',
+            cal: '40',
+            description: 'cilantro-lime',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1036-cauliflower-rice/web-desktop/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          }
+        ]
       }
-    ]
+    ],
 
   }
 ]

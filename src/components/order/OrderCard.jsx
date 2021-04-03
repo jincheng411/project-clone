@@ -14,9 +14,6 @@ function OrderCard({ item }) {
   const [amountTabVisible, setAmountTabVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
-  // const handleOnMouseEnter = (e) => {
-  //   console.log(e.target.id)
-  // }
   const handleOnMouseEnterOption = () => {
     setOptionTabVisible(true);
   }
@@ -65,7 +62,7 @@ function OrderCard({ item }) {
         <h2>{item.name}</h2>
         <p>{item.description}</p>
         <div className="cost-and-cal">
-          <div className="cost">{item.price[0]}</div>
+          {item.price && <div className="cost">{item.price[0]}</div>}
           <div className="cal">{item.cal} cal</div>
         </div>
       </div>

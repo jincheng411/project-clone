@@ -13,8 +13,8 @@ function Order() {
       <div className="order">
         <Header product={product} />
         <Section section={product.sections[0]}/>
-        <Section section={product.sections[0]}/>
-        <Section section={product.sections[0]}/>
+        <Section section={product.sections[1]}/>
+        {/* <Section section={product.sections[0]}/> */}
       </div>
       <AddToBag />
     </>
