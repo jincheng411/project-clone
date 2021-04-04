@@ -21,7 +21,9 @@ function OrderCard({ item, category }) {
     setOptionTabVisible(false);
   }
   const handleOnClick = () => {
-    for (let orderItem of state.order) {
+    console.log(state.order[category])
+    console.log(state.order)
+    for (let orderItem of state.order[category]) {
       if (orderItem.name === item.name) {
         dispatch({
           type: 'REMOVE_FROM_ORDER',
@@ -32,13 +34,14 @@ function OrderCard({ item, category }) {
         return;
       }
     }
-    if (state.order.length < 2) {
+    if (state.order[category].length < 2) {
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
       dispatch({
         type: 'ADD_TO_ORDER',
         item: {
           name: item.name,
+          category: category,
           price: Number(item.price[0]),
           option: item.options.length > 0 ? item.options[0].name : undefined
         },
