@@ -7,7 +7,7 @@ import ItemOptions from './ItemOptions.jsx';
 import { useStateValue } from '../../StateProvider.js'
 import './OrderCard.css';
 
-function OrderCard({ item }) {
+function OrderCard({ item, category }) {
   const [state, dispatch] = useStateValue();
   const [optionTabVisible, setOptionTabVisible] = useState(false);
   const [excessTabVisible, setExcessTabVisible] = useState(false);

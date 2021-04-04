@@ -2,7 +2,7 @@ import React from 'react';
 import './Section.css';
 import OrderCard from './OrderCard.jsx';
 
-function Section({ section }) {
+function Section({ section, category }) {
   const items = section.items;
   return (
     <div className="order-section">
@@ -12,7 +12,7 @@ function Section({ section }) {
       </div>
       <div className="order-cards">
         {items.map((item) =>
-          <OrderCard item={item} key={item.name} />
+          <OrderCard item={item} key={item.name} category={category} />
         )}
       </div>
     </div>
