@@ -7,16 +7,13 @@ import ItemOptions from './ItemOptions.jsx';
 import { useStateValue } from '../../StateProvider.js'
 import './OrderCard.css';
 
-function OrderCard({ item }) {
+function OrderCard({ item, category }) {
   const [state, dispatch] = useStateValue();
   const [optionTabVisible, setOptionTabVisible] = useState(false);
   const [excessTabVisible, setExcessTabVisible] = useState(false);
   const [amountTabVisible, setAmountTabVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
-  // const handleOnMouseEnter = (e) => {
-  //   console.log(e.target.id)
-  // }
   const handleOnMouseEnterOption = () => {
     setOptionTabVisible(true);
   }
@@ -51,7 +48,7 @@ function OrderCard({ item }) {
       setExcessTabVisible(true);
       setTimeout(() => {
         setExcessTabVisible(false);
-      }, 2500)
+      }, 2200)
     }
     console.log(state.order)
   }
@@ -65,7 +62,7 @@ function OrderCard({ item }) {
         <h2>{item.name}</h2>
         <p>{item.description}</p>
         <div className="cost-and-cal">
-          <div className="cost">{item.price[0]}</div>
+          {item.price && <div className="cost">{item.price[0]}</div>}
           <div className="cal">{item.cal} cal</div>
         </div>
       </div>

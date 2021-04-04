@@ -12,6 +12,7 @@
 .meal-summary{
   color: #451400;
   margin-bottom: 15px;
+  text-transform: capitalize;
 }
 .meal-summary>h3{
   margin-bottom: 0;
