@@ -8,8 +8,8 @@ function AddToBag() {
     <div className="add-to-bag">
       <div className="meal-summary">
         <h3>YOUR MEAL</h3>
-        {state.order.length > 0 ?
-         <p>{state.order.map((order) =>
+        {state['protein'].length > 0 ?
+         <p>{state['protein'].map((order) =>
           order.name).join(' & ')}</p>
           :
           <p>Select a protein or veggie to get started</p>}
