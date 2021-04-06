@@ -200,9 +200,52 @@ export const products = [
                 name: 'side',
               },
             ]
-          }
+          },
         ]
-      }
+      },
+      {
+        name: 'beans',
+        items: [
+          {
+            name: 'black beans',
+            cal: '130',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5051-black-beans/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+          {
+            name: 'pinto beans',
+            cal: '130',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5052-pinto-beans/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+        ]
+      },
     ],
 
   }
