@@ -1,7 +1,7 @@
 export const initialState = {
     protein: [],
     rice: [],
-    bean: [],
+    beans: [],
     topping: [],
     option: [],
     side: [],
