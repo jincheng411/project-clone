@@ -21,20 +21,22 @@ function OrderCard({ item, category }) {
     setOptionTabVisible(false);
   }
   const handleOnClick = () => {
-    console.log(state.order[category])
-    console.log(state.order)
-    for (let orderItem of state.order[category]) {
+    console.log(state)
+
+    for (let orderItem of state[category]) {
       if (orderItem.name === item.name) {
         dispatch({
           type: 'REMOVE_FROM_ORDER',
           name: item.name,
+          category: category,
         })
+
         setAmountTabVisible(!amountTabVisible);
         setIsSelected(!isSelected);
         return;
       }
     }
-    if (state.order[category].length < 2) {
+    if (state[category].length < 2) {
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
       dispatch({
@@ -42,8 +44,8 @@ function OrderCard({ item, category }) {
         item: {
           name: item.name,
           category: category,
-          price: Number(item.price[0]),
-          option: item.options.length > 0 ? item.options[0].name : undefined
+          price: item.price ? Number(item.price[0]) : undefined,
+          option: item.options.length > 0 ? item.options[0].name : undefined,
         },
       })
       return;
@@ -53,7 +55,7 @@ function OrderCard({ item, category }) {
         setExcessTabVisible(false);
       }, 2200)
     }
-    console.log(state.order)
+
   }
   const handleOptionsClick = () => {
     setOptionsVisible(!optionsVisible);
@@ -72,7 +74,7 @@ function OrderCard({ item, category }) {
       <CustomizeTab isVisible={optionTabVisible} />
       <ExcessTab isVisible={excessTabVisible} />
 
-      <AmountTab amount={state.order.length === 2 ? '1/2' : '1'} isVisible={amountTabVisible} hideAmount={handleOnClick} />
+      <AmountTab amount={state[category].length === 2 ? '1/2' : '1'} isVisible={amountTabVisible} hideAmount={handleOnClick} />
 
       {/* -----more option ----- */}
       {item.options.length > 0 && <div className="more-option" onMouseEnter={handleOnMouseEnterOption} onMouseLeave={handleOnMouseLeaveOption} onClick={handleOptionsClick} >
