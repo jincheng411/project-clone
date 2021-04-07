@@ -140,6 +140,7 @@ export const products = [
           },
         ]
       },
+      // ----------rice-----------
       {
         name: 'rice',
         items: [
@@ -203,6 +204,8 @@ export const products = [
           },
         ]
       },
+
+      // ---------beans---------
       {
         name: 'beans',
         items: [
@@ -244,6 +247,184 @@ export const products = [
               },
             ]
           },
+        ]
+      },
+      // ------topping-------------
+      {
+        name: 'topping',
+        items: [
+          {
+            name: 'guacamole',
+            cal: '230',
+            price: ['2.70'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5301-guacamole/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+          {
+            name: 'fresh tomato salsa',
+            cal: '25',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5201-fresh-tomato-salsa/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+          {
+            name: 'roasted chili-corn salsa',
+            cal: '80',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5202-roasted-chili-corn-salsa/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+          {
+            name: 'tomatillo-green chili salsa',
+            cal: '15',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5203-tomatillo-green-chili-salsa/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+          {
+            name: 'tomatillo-red chili salsa',
+            cal: '30',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5204-tomatillo-red-chili-salsa/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+          {
+            name: 'sour cream',
+            cal: '110',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5251-sour-cream/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+          {
+            name: 'fujita veggies',
+            cal: '20',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5101-fajita-veggies/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+            ]
+          },
+          {
+            name: 'cheese',
+            cal: '110',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5252-monterey-jack-cheese/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+            ]
+          },
+          {
+            name: 'romaine lettuce',
+            cal: '5',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5351-romaine-lettuce/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'light',
+              },
+              {
+                name: 'extra',
+              },
+            ]
+          },
+          {
+            name: 'queso blanco',
+            cal: '120',
+            price: ['1.40'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1029-queso-blanco/web-mobile/order.png',
+            options: [
+              {
+                name: 'normal',
+              },
+              {
+                name: 'side',
+              },
+            ]
+          },
+
         ]
       },
     ],

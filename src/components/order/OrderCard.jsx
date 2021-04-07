@@ -67,7 +67,7 @@ function OrderCard({ item, category }) {
         <h2>{item.name}</h2>
         <p>{item.description}</p>
         <div className="cost-and-cal">
-          {item.price && <div className="cost">{item.price[0]}</div>}
+          {item.price && <div className="cost">${item.price[0]}</div>}
           <div className="cal">{item.cal} cal</div>
         </div>
       </div>
