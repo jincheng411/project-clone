@@ -24,11 +24,16 @@ function OrderCard({ item, category }) {
     console.log(state)
 
     for (let orderItem of state[category]) {
+      console.log(orderItem.name)
+      console.log(item.name)
+      console.log(orderItem.name === item.name)
       if (orderItem.name === item.name) {
         dispatch({
           type: 'REMOVE_FROM_ORDER',
-          name: item.name,
-          category: category,
+          item: {
+            name: item.name,
+            category: category,
+          }
         })
 
         setAmountTabVisible(!amountTabVisible);
@@ -36,7 +41,11 @@ function OrderCard({ item, category }) {
         return;
       }
     }
-    if (state[category].length < 2) {
+
+    if ((category !== 'protein' &&
+      category !== 'rice' &&
+      category !== 'beans') ||
+      state[category].length < 2) {
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
       dispatch({
@@ -67,7 +76,7 @@ function OrderCard({ item, category }) {
         <h2>{item.name}</h2>
         <p>{item.description}</p>
         <div className="cost-and-cal">
-          {item.price && <div className="cost">{item.price[0]}</div>}
+          {item.price && <div className="cost">${item.price[0]}</div>}
           <div className="cal">{item.cal} cal</div>
         </div>
       </div>
