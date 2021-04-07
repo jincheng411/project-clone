@@ -3,26 +3,25 @@ export const initialState = {
     rice: [],
     beans: [],
     topping: [],
-    option: [],
+    options: [],
     side: [],
     drink: [],
 }
 
 export const reducer = (state, action) => {
+  const cat = action.item.category;
   switch(action.type) {
     case 'ADD_TO_ORDER':
       if (state[action.item.category].length < 2) {
-        const cat = action.item.category;
         return {
           ...state,
           [cat]: [...state[cat], action.item]
         }
       }
     case 'REMOVE_FROM_ORDER':
-      const filtered = state[action.category].filter((item) => {
+      const filtered = state[cat].filter((item) => {
         return item.name !== action.name;
       })
-      const cat = action.category;
       return {
         ...state,
         [cat]: filtered,

@@ -16,6 +16,8 @@ function Order() {
         <Section section={product.sections[1]} category='rice' />
         <Section section={product.sections[2]} category='beans' />
         <Section section={product.sections[3]} category='topping' />
+        <Section section={product.sections[4]} category='options' />
+        <Section section={product.sections[5]} category='side' />
       </div>
       <AddToBag />
     </>

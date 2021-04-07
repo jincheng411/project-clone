@@ -424,9 +424,56 @@ export const products = [
               },
             ]
           },
-
         ]
       },
+      // ---------options---------
+      {
+        name: 'options',
+        items: [
+          {
+            name: 'double wrap with tortilla',
+            cal: '130',
+            price: ['0.25'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5501-flour-tortilla-burrito-size/web-mobile/order.jpg',
+            options: [],
+          },
+        ],
+      },
+      // --------------side-------------------
+      {
+        name: 'side',
+        items: [
+          {
+            name: 'chips',
+            cal: '540',
+            price: ['1.85'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1002-chips/web-mobile/chips.png',
+            options: [],
+          },
+          {
+            name: 'chips & guacamole',
+            cal: '770',
+            price: ['4.55'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1003-chips-%26-guacamole/web-desktop/order.png',
+            options: [],
+          },
+          {
+            name: 'large chips & large guacamole',
+            cal: '1270',
+            price: ['7.25'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1015-large-chips-%26-large-guacamole/web-desktop/order.png',
+            options: [],
+          },
+          {
+            name: 'side of guacamole',
+            cal: '230',
+            price: ['2.70'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1015-large-chips-%26-large-guacamole/web-desktop/order.png',
+            options: [],
+          },
+        ],
+      },
+
     ],
 
   }
