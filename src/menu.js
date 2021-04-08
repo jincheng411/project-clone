@@ -529,9 +529,159 @@ export const products = [
           },
         ],
       },
+      // --------------drinks---------
+      {
+        name: 'drinks',
+        items: [
+          {
+            name: 'organic lemonade',
+            cal: '110 - 220',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-ftn-organic-lemonade/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'organic hibiscus lemonade',
+            cal: '110 - 220',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-ftn-hibiscus-lemonade/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'organic mandarin agua fresca',
+            cal: '110 - 220',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-ftn-mandarin-agua-fresca/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'organic berry agua fresca',
+            cal: '110 - 220',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-ftn-berry-agua-fresca/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'fountain drink',
+            description: 'soda and iced tea',
+            cal: '0 - 300',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1019-small-drink/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'mexican coca-cola',
+            cal: '150',
+            price: ['2.75'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2810-mexican-coca-cola/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'tractor organic black tea',
+            cal: '30',
+            price: ['3.45'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2837-tractor-organic-black-tea/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'tractor organic lemonade',
+            cal: '140',
+            price: ['3.45'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2838-tractor-organic-lemonade/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'san pellegrino sparkling',
+            cal: '0',
+            price: ['3.00'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2805-san-pellegrino-sparkling-water/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'blackberry izze',
+            cal: '220',
+            price: ['2.75'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2051-blackberry-izze/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'bottled water',
+            cal: '0',
+            price: ['2.85'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2201-bottled-water/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'pressed apple juice',
+            cal: '240',
+            price: ['3.20'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2101-nantuckets-nectar-pressed-apple-juice/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'peach orange juice',
+            cal: '220',
+            price: ['3.20'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2103-peach-orange-juice/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'pineapple orange banana juice',
+            cal: '280',
+            price: ['3.20'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2102-pineapple-banana-orange-juice/web-desktop/order.png',
+            options: []
+          },
 
-    ],
 
-  }
+        ],
+      }, /* -----end drinks------- */
+    ],/* -----end section------- */
+  }, /* -----end product------- */
 ]
 export default menu;
