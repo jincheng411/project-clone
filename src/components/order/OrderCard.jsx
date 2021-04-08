@@ -13,6 +13,7 @@ function OrderCard({ item, category }) {
   const [excessTabVisible, setExcessTabVisible] = useState(false);
   const [amountTabVisible, setAmountTabVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
+  const [amount, setAmount] = useState('1');
   const [isSelected, setIsSelected] = useState(false);
   const handleOnMouseEnterOption = () => {
     setOptionTabVisible(true);
@@ -21,7 +22,6 @@ function OrderCard({ item, category }) {
     setOptionTabVisible(false);
   }
   const handleOnClick = () => {
-    console.log(state)
 
     for (let orderItem of state[category]) {
       if (orderItem.name === item.name) {
@@ -33,6 +33,7 @@ function OrderCard({ item, category }) {
             category: category,
           }
         })
+        console.log(state)
 
         setAmountTabVisible(!amountTabVisible);
         setIsSelected(!isSelected);
@@ -41,9 +42,9 @@ function OrderCard({ item, category }) {
     }
 
     if ((category !== 'protein' &&
-      category !== 'rice' &&
-      category !== 'beans') ||
-      state[category].length < 2) {
+    category !== 'rice' &&
+    category !== 'beans') ||
+    state[category].length < 2) {
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
       dispatch({
@@ -55,7 +56,6 @@ function OrderCard({ item, category }) {
           option: item.options.length > 0 ? item.options[0].name : undefined,
         },
       })
-      return;
     } else {
       setExcessTabVisible(true);
       setTimeout(() => {
@@ -63,19 +63,34 @@ function OrderCard({ item, category }) {
       }, 2200)
     }
 
+    console.log(state)
   }
   const handleOptionsClick = () => {
     setOptionsVisible(!optionsVisible);
   }
-  // ---------card amount tag--------------
-  let amount = '1';
-  if (category !== 'protein' &&
-    category !== 'rice' &&
-    category !== 'beans') {
-    amount = '1';
-  } else {
-    amount = state[category].length === 2 ? '1/2' : '1'
+  const handleOptionChange = (index) => {
+    dispatch({
+      type: 'CHANGE_OPTION',
+      item: {
+        name: item.name,
+        category: category,
+        option: item.options[index],
+      }
+    })
+    console.log(item.options[index])
+    setAmount(item.options[index].name);
+    console.log(state)
   }
+  // ---------card amount tag--------------
+
+  // if (category !== 'protein' &&
+  //   category !== 'rice' &&
+  //   category !== 'beans') {
+  //   setAmount()
+  //   amount = item.option?.name === 'normal' ? '1' : item.option;
+  // } else {
+  //   amount = state[category].length === 2 ? '1/2' : '1'
+  // }
   // ---------card amount tag end--------------
 
   return (
@@ -98,7 +113,7 @@ function OrderCard({ item, category }) {
       {item.options.length > 0 && <div className="more-option" onMouseEnter={handleOnMouseEnterOption} onMouseLeave={handleOnMouseLeaveOption} onClick={handleOptionsClick} >
         <MoreVertIcon />
       </div>}
-      <ItemOptions options={item.options} isVisible={optionsVisible} clickToClose={handleOptionsClick} />
+      <ItemOptions options={item.options} isVisible={optionsVisible} clickToClose={handleOptionsClick} changeOption={handleOptionChange} />
 
       <div className="hover-effect" onClick={handleOnClick}></div>
     </div>

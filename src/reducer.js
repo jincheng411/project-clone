@@ -9,7 +9,7 @@ export const initialState = {
 }
 
 export const reducer = (state, action) => {
-  const cat = action.item.category;
+  const cat = action.item?.category;
   switch (action.type) {
     case 'ADD_TO_ORDER':
       if ((cat !== 'protein' &&
@@ -28,6 +28,18 @@ export const reducer = (state, action) => {
       return {
         ...state,
         [cat]: filtered,
+      }
+    case 'CHANGE_OPTION':
+      let targetCat = state[cat];
+      for (let i = 0; i < targetCat.length; i++) {
+        console.log(action.item.option)
+        if (targetCat[i].name === action.item.name) {
+          targetCat[i].option = action.item.option;
+        }
+      }
+      return {
+        ...state,
+        [cat]: targetCat,
       }
     default:
       return state;
