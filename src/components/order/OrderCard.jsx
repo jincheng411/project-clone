@@ -77,21 +77,10 @@ function OrderCard({ item, category }) {
         option: item.options[index],
       }
     })
-    console.log(item.options[index])
-    setAmount(item.options[index].name);
+    const amountVal = item.options[index].name
+    setAmount(amountVal === 'normal' ? '1' : amountVal);
     console.log(state)
   }
-  // ---------card amount tag--------------
-
-  // if (category !== 'protein' &&
-  //   category !== 'rice' &&
-  //   category !== 'beans') {
-  //   setAmount()
-  //   amount = item.option?.name === 'normal' ? '1' : item.option;
-  // } else {
-  //   amount = state[category].length === 2 ? '1/2' : '1'
-  // }
-  // ---------card amount tag end--------------
 
   return (
     <div className={`order-card ${isSelected && "card-selected"}`}>
