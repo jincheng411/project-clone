@@ -24,10 +24,8 @@ function OrderCard({ item, category }) {
     console.log(state)
 
     for (let orderItem of state[category]) {
-      console.log(orderItem.name)
-      console.log(item.name)
-      console.log(orderItem.name === item.name)
       if (orderItem.name === item.name) {
+        console.log('removing')
         dispatch({
           type: 'REMOVE_FROM_ORDER',
           item: {
@@ -69,6 +67,17 @@ function OrderCard({ item, category }) {
   const handleOptionsClick = () => {
     setOptionsVisible(!optionsVisible);
   }
+  // ---------card amount tag--------------
+  let amount = '1';
+  if (category !== 'protein' &&
+    category !== 'rice' &&
+    category !== 'beans') {
+    amount = '1';
+  } else {
+    amount = state[category].length === 2 ? '1/2' : '1'
+  }
+  // ---------card amount tag end--------------
+
   return (
     <div className={`order-card ${isSelected && "card-selected"}`}>
       <img src={item.img} alt="section" />
@@ -83,7 +92,7 @@ function OrderCard({ item, category }) {
       <CustomizeTab isVisible={optionTabVisible} />
       <ExcessTab isVisible={excessTabVisible} />
 
-      <AmountTab amount={state[category].length === 2 ? '1/2' : '1'} isVisible={amountTabVisible} hideAmount={handleOnClick} />
+      <AmountTab amount={amount} isVisible={amountTabVisible} hideAmount={handleOnClick} />
 
       {/* -----more option ----- */}
       {item.options.length > 0 && <div className="more-option" onMouseEnter={handleOnMouseEnterOption} onMouseLeave={handleOnMouseLeaveOption} onClick={handleOptionsClick} >
