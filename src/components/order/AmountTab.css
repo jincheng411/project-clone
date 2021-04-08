@@ -9,11 +9,12 @@
   border: 2px solid white;
   font-weight: 500;
   z-index: 2;
-  font-size: 1.7rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   visibility: hidden;
+  text-transform: capitalize;
 }
 .amount-tab:hover ~ .hover-effect {
   opacity: 1;

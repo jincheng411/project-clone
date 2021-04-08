@@ -468,14 +468,220 @@ export const products = [
             name: 'side of guacamole',
             cal: '230',
             price: ['2.70'],
-            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1015-large-chips-%26-large-guacamole/web-desktop/order.png',
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5301-guacamole/web-mobile/order.png',
+            options: [],
+          },
+          {
+            name: 'tortilla on the side',
+            cal: '320',
+            price: ['0.25'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-5501-flour-tortilla-burrito-size/web-mobile/order.jpg',
+            options: [],
+          },
+          {
+            name: 'chips & fresh tomato salsa',
+            cal: '570',
+            price: ['2.45'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1005-chips-%26-salsa/web-mobile/order.png',
+            options: [],
+          },
+          {
+            name: 'chips & tomatillo-red chili salsa',
+            cal: '570',
+            price: ['2.45'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1007-chips-&-tomatillo-red-chili-salsa/web-mobile/order.png',
+            options: [],
+          },
+          {
+            name: 'chips & tomatillo-green chili salsa',
+            cal: '560',
+            price: ['2.45'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1006-chips-and-tomatillo-green-chili-salsa/web-mobile/order.png',
+            options: [],
+          },
+          {
+            name: 'chips & roasted chili-corn salsa',
+            cal: '620',
+            price: ['2.45'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1008-chips-%26-roasted-chili-corn-salsa/web-mobile/order.png',
+            options: [],
+          },
+          {
+            name: 'queso blanco',
+            cal: '240',
+            price: ['2.70'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1029-queso-blanco/web-mobile/order.png',
+            options: [],
+          },
+          {
+            name: 'large chips & large queso blanco',
+            cal: '1290',
+            price: ['7.25'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1033-large-chips-%26-large-queso-blanco/web-mobile/order.png',
+            options: [],
+          },
+          {
+            name: 'chips & queso blanco',
+            cal: '780',
+            price: ['4.55'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1032-chips-&-queso-blanco/web-mobile/order.png',
             options: [],
           },
         ],
       },
+      // --------------drinks---------
+      {
+        name: 'drinks',
+        items: [
+          {
+            name: 'organic lemonade',
+            cal: '110 - 220',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-ftn-organic-lemonade/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'organic hibiscus lemonade',
+            cal: '110 - 220',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-ftn-hibiscus-lemonade/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'organic mandarin agua fresca',
+            cal: '110 - 220',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-ftn-mandarin-agua-fresca/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'organic berry agua fresca',
+            cal: '110 - 220',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-ftn-berry-agua-fresca/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'fountain drink',
+            description: 'soda and iced tea',
+            cal: '0 - 300',
+            price: ['2.75', '3.05'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-1019-small-drink/web-desktop/order.png',
+            options: [
+              {
+                name: '32 FL OZ',
+                note: ' - $3.05',
+              },
+              {
+                name: '22 FL OZ',
+                note: ' - $2.75',
+              },
+            ]
+          },
+          {
+            name: 'mexican coca-cola',
+            cal: '150',
+            price: ['2.75'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2810-mexican-coca-cola/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'tractor organic black tea',
+            cal: '30',
+            price: ['3.45'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2837-tractor-organic-black-tea/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'tractor organic lemonade',
+            cal: '140',
+            price: ['3.45'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2838-tractor-organic-lemonade/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'san pellegrino sparkling',
+            cal: '0',
+            price: ['3.00'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2805-san-pellegrino-sparkling-water/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'blackberry izze',
+            cal: '220',
+            price: ['2.75'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2051-blackberry-izze/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'bottled water',
+            cal: '0',
+            price: ['2.85'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2201-bottled-water/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'pressed apple juice',
+            cal: '240',
+            price: ['3.20'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2101-nantuckets-nectar-pressed-apple-juice/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'peach orange juice',
+            cal: '220',
+            price: ['3.20'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2103-peach-orange-juice/web-desktop/order.png',
+            options: []
+          },
+          {
+            name: 'pineapple orange banana juice',
+            cal: '280',
+            price: ['3.20'],
+            img: 'https://www.chipotle.com/content/dam/chipotle/global/menu/menu-items/cmg-2102-pineapple-banana-orange-juice/web-desktop/order.png',
+            options: []
+          },
 
-    ],
 
-  }
+        ],
+      }, /* -----end drinks------- */
+    ],/* -----end section------- */
+  }, /* -----end product------- */
 ]
 export default menu;
