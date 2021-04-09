@@ -19,3 +19,7 @@
 .amount-tab:hover ~ .hover-effect {
   opacity: 1;
 }
+.amount-tab-icon {
+  font-size: 1.9rem;
+  font-weight: 800;
+}

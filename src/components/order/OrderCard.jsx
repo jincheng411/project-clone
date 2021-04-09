@@ -42,9 +42,9 @@ function OrderCard({ item, category }) {
     }
 
     if ((category !== 'protein' &&
-    category !== 'rice' &&
-    category !== 'beans') ||
-    state[category].length < 2) {
+      category !== 'rice' &&
+      category !== 'beans') ||
+      state[category].length < 2) {
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
       dispatch({
@@ -68,7 +68,46 @@ function OrderCard({ item, category }) {
   const handleOptionsClick = () => {
     setOptionsVisible(!optionsVisible);
   }
+
   const handleOptionChange = (index) => {
+    for (let orderItem of state[category]) {
+      if (orderItem.name === item.name) {
+        dispatch({
+          type: 'CHANGE_OPTION',
+          item: {
+            name: item.name,
+            category: category,
+            option: item.options[index],
+          }
+        })
+        const amountVal = item.options[index].name
+        setAmount(amountVal === 'normal' ? '1' : amountVal);
+        return;
+      }
+    }
+
+    if ((category !== 'protein' &&
+      category !== 'rice' &&
+      category !== 'beans') ||
+      state[category].length < 2) {
+      setAmountTabVisible(!amountTabVisible);
+      setIsSelected(!isSelected);
+      dispatch({
+        type: 'ADD_TO_ORDER',
+        item: {
+          name: item.name,
+          category: category,
+          price: item.price ? Number(item.price[0]) : undefined,
+          option: item.options.length > 0 ? item.options[0].name : undefined,
+        },
+      })
+    } else {
+      setExcessTabVisible(true);
+      setTimeout(() => {
+        setExcessTabVisible(false);
+      }, 2200)
+    }
+
     dispatch({
       type: 'CHANGE_OPTION',
       item: {
