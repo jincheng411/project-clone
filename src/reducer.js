@@ -5,7 +5,7 @@ export const initialState = {
   topping: [],
   options: [],
   side: [],
-  drink: [],
+  drinks: [],
 }
 
 export const reducer = (state, action) => {
