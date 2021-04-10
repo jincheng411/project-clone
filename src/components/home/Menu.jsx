@@ -19,7 +19,7 @@ function Menu() {
   return (
     <div className="menu-list">
       <span id="order"></span>
-      {products.map((item) => <Product key={item.name} name={item.name} imgUrl={item.url} />)}
+      {products.map((item) => <Product key={item._id} name={item.name} imgUrl={item.url} />)}
     </div>
   );
 }
