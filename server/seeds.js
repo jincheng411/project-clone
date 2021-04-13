@@ -678,76 +678,44 @@ const seedDrinkItems = [
 
 
 
-
-
-
-
-
-
-Item.insertMany(seedProteinItems)
-  .then(proteinData => {
-    proteinIds = proteinData.map((item) => mongoose.Types.ObjectId(item._id))
-    Item.insertMany(seedRiceItems)
-      .then(riceData => {
-        riceIds = riceData.map((item) => mongoose.Types.ObjectId(item._id))
-        Item.insertMany(seedBeanItems)
-          .then(beanData => {
-            beanIds = beanData.map((item) => mongoose.Types.ObjectId(item._id))
-            Item.insertMany(seedOptionItems)
-              .then(optionData => {
-                optionIds = optionData.map((item) => mongoose.Types.ObjectId(item._id))
-                Item.insertMany(seedToppingItems)
-                  .then(toppingData => {
-                    toppingIds = toppingData.map((item) => mongoose.Types.ObjectId(item._id))
-                    Item.insertMany(seedSideItems)
-                      .then(sideData => {
-                        sideIds = sideData.map((item) => mongoose.Types.ObjectId(item._id))
-                        Item.insertMany(seedDrinkItems)
-                          .then(drinkData => {
-                            drinkIds = drinkData.map((item) => mongoose.Types.ObjectId(item._id))
-                            const seedSections = [
-                              {
-                                name: 'protein or veggie',
-                                note: 'Choose up to two.',
-                                items: proteinIds,
-                              },
-                              {
-                                name: 'rice',
-                                items: riceIds,
-                              },
-                              {
-                                name: 'beans',
-                                items: beanIds,
-                              },
-                              {
-                                name: 'topping',
-                                items: toppingIds,
-                              },
-                              {
-                                name: 'options',
-                                items: optionIds,
-                              },
-                              {
-                                name: 'side',
-                                items: sideIds,
-                              },
-                              {
-                                name: 'drinks',
-                                items: drinkIds,
-                              },
-                            ];
-                            Section.insertMany(seedSections)
-                              .then(() => {
-                                Product.insertMany(seedProducts)
-                                  .then(async () => {
-                                    const output = await Section.findOne().populate('items')
-                                    console.log(output)
-                                  })
-                              })
-                          })
-                      })
-                  })
-              })
-          })
+const seedSections = [
+  {
+    name: 'protein or veggie',
+    note: 'Choose up to two.',
+    items: seedProteinItems,
+  },
+  {
+    name: 'rice',
+    items: seedRiceItems,
+  },
+  {
+    name: 'beans',
+    items: seedBeanItems,
+  },
+  {
+    name: 'topping',
+    items: seedToppingItems,
+  },
+  {
+    name: 'options',
+    items: seedOptionItems,
+  },
+  {
+    name: 'side',
+    items: seedSideItems,
+  },
+  {
+    name: 'drinks',
+    items: seedDrinkItems,
+  },
+];
+Section.insertMany(seedSections)
+  .then(() => {
+    Product.insertMany(seedProducts)
+      .then(() => {
+        // Section.findOne().populate('items').exec((err, result) => {
+        //   console.log(result)
       })
+    // console.log('output')
+    // console.log(output)
   })
