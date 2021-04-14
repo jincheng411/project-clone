@@ -25,7 +25,7 @@ app.get('/api/products', async (req, res) => {
   res.json(products);
 })
 app.get('/api/test', async (req, res) => {
-  const section = await Section.findOne();
+  const section = await Section.findOne().populate('items');
 
   res.send(section);
 })
