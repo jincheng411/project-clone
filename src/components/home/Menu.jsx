@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import menu from '../../menu';
 import Product from './Product.jsx';
 import axios from 'axios';
 import './Menu.css';

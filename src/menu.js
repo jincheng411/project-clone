@@ -645,4 +645,4 @@ export const products = [
     ],/* -----end section------- */
   }, /* -----end product------- */
 ]
-export default menu;
+
