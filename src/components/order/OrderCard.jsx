@@ -45,6 +45,7 @@ function OrderCard({ item, category }) {
       category !== 'rice' &&
       category !== 'beans') ||
       state[category].length < 2) {
+      setAmount('1');
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
       dispatch({
