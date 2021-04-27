@@ -6,8 +6,10 @@ function AmountTab({ amount, quantity, isVisible, hideAmount }) {
   return (
     <div className={`amount-tab ${isVisible && "tab-visible"}`} onClick={hideAmount} >
       {(amount === '1') && <span className="amount-tab-icon">&#10003;</span>}
-      {(amount &&  amount === 'double') && <span className="amount-tab-icon">2x</span>}
-      {((amount &&  amount !== '1') && (amount &&  amount !== 'double')) && <span>{amount}</span>}
+      {/* {(amount &&  amount === 'double') && <span className="amount-tab-icon">2x</span>} */}
+      {/* {((amount &&  amount !== '1') ) && <span>{amount}</span>} */}
+      {((amount &&  amount !== '1' && amount !== '1x' && amount !== '2x' && amount !== '1/2' )) && <span>{amount}</span>}
+      {((amount &&  amount === '1x') || (amount &&  amount === '2x') || (amount &&  amount === '1/2')) && <span className="amount-tab-icon">{amount}</span>}
       {quantity && <span >{quantity}</span>}
     </div>
   )
