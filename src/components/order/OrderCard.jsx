@@ -13,7 +13,7 @@ function OrderCard({ item, category }) {
   const [excessTabVisible, setExcessTabVisible] = useState(false);
   const [amountTabVisible, setAmountTabVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
-  const [amount, setAmount] = useState('1');
+  // const [amount, setAmount] = useState('1');
   const [isSelected, setIsSelected] = useState(false);
   const handleOnMouseEnterOption = () => {
     setOptionTabVisible(true);
@@ -32,6 +32,13 @@ function OrderCard({ item, category }) {
             category: category,
           }
         })
+        dispatch({
+          type: 'SET_AMOUNT',
+          amount: '1',
+          item: {
+            category: category,
+          }
+        })
         console.log(state)
 
         setAmountTabVisible(!amountTabVisible);
@@ -44,7 +51,27 @@ function OrderCard({ item, category }) {
       category !== 'rice' &&
       category !== 'beans') ||
       state[category].items.length < 2) {
-      setAmount('1');
+      if ((category === 'protein' ||
+        category === 'rice' ||
+        category === 'beans') &&
+        state[category].items.length === 1) {
+        // setAmount('1/2');
+        dispatch({
+          type: 'SET_AMOUNT',
+          amount: '1/2',
+          item: {
+            category: category,
+          }
+        })
+      } else {
+        dispatch({
+          type: 'SET_AMOUNT',
+          amount: '1',
+          item: {
+            category: category,
+          }
+        })
+      }
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
       dispatch({
@@ -56,11 +83,11 @@ function OrderCard({ item, category }) {
           option: item.options.length > 0 ? item.options[0].name : undefined,
         },
       })
-    // }
-    // else if ((category === 'protein' ||
-    //   category === 'rice' ||
-    //   category === 'beans') &&
-    //   state[category].items.length === 2) {
+      // }
+      // else if ((category === 'protein' ||
+      //   category === 'rice' ||
+      //   category === 'beans') &&
+      //   state[category].items.length === 2) {
 
     } else {
       setExcessTabVisible(true);
@@ -86,8 +113,15 @@ function OrderCard({ item, category }) {
             option: item.options[index],
           }
         })
-        const amountVal = item.options[index].name
-        setAmount(amountVal === 'normal' ? '1' : amountVal);
+        const amountVal = item.options[index].name === 'normal' ? '1' : item.options[index].name
+        dispatch({
+          type: 'SET_AMOUNT',
+          amount: amountVal,
+          item: {
+            category: category,
+          }
+        })
+        // setAmount(amountVal === 'normal' ? '1' : amountVal);
         return;
       }
     }
@@ -95,7 +129,7 @@ function OrderCard({ item, category }) {
     if ((category !== 'protein' &&
       category !== 'rice' &&
       category !== 'beans') ||
-      state[category].length < 2) {
+      state[category].items.length < 2) {
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
       dispatch({
@@ -122,8 +156,15 @@ function OrderCard({ item, category }) {
         option: item.options[index],
       }
     })
-    const amountVal = item.options[index].name
-    setAmount(amountVal === 'normal' ? '1' : amountVal);
+    const amountVal = item.options[index].name === 'normal' ? '1' : item.options[index].name
+    dispatch({
+      type: 'SET_AMOUNT',
+      amount: amountVal,
+      item: {
+        category: category,
+      }
+    })
+    // setAmount(amountVal === 'normal' ? '1' : amountVal);
     console.log(state)
   }
 
@@ -141,7 +182,7 @@ function OrderCard({ item, category }) {
       <CustomizeTab isVisible={optionTabVisible} />
       <ExcessTab isVisible={excessTabVisible} />
 
-      <AmountTab amount={amount} isVisible={amountTabVisible} hideAmount={handleOnClick} />
+      <AmountTab amount={state[category].amount} isVisible={amountTabVisible} hideAmount={handleOnClick} />
 
       {/* -----more option ----- */}
       {item.options.length > 0 && <div className="more-option" onMouseEnter={handleOnMouseEnterOption} onMouseLeave={handleOnMouseLeaveOption} onClick={handleOptionsClick} >
