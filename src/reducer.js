@@ -1,11 +1,11 @@
 export const initialState = {
-  protein: [],
-  rice: [],
-  beans: [],
-  topping: [],
-  options: [],
-  side: [],
-  drinks: [],
+  protein: {items: []},
+  rice: {items: []},
+  beans: {items: []},
+  topping: {items: []},
+  options: {items: []},
+  side: {items: []},
+  drinks: {items: []},
 }
 
 export const reducer = (state, action) => {
@@ -15,22 +15,22 @@ export const reducer = (state, action) => {
       if ((cat !== 'protein' &&
         cat !== 'rice' &&
         cat !== 'beans') ||
-        state[cat].length < 2) {
+        state[cat].items.length < 2) {
         return {
           ...state,
-          [cat]: [...state[cat], action.item]
+          [cat]: {...state[cat], items: [...state[cat].items,action.item]},
         }
       }
     case 'REMOVE_FROM_ORDER':
-      const filtered = state[cat].filter((item) => {
+      const filtered = state[cat].items.filter((item) => {
         return item.name !== action.item.name;
       })
       return {
         ...state,
-        [cat]: filtered,
+        [cat]: {...state[cat], items: filtered},
       }
     case 'CHANGE_OPTION':
-      let targetCat = state[cat];
+      let targetCat = state[cat].items;
       for (let i = 0; i < targetCat.length; i++) {
         console.log(action.item.option)
         if (targetCat[i].name === action.item.name) {
@@ -39,7 +39,7 @@ export const reducer = (state, action) => {
       }
       return {
         ...state,
-        [cat]: targetCat,
+        [cat]: {...state[cat], items:targetCat},
       }
     default:
       return state;

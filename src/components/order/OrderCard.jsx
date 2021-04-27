@@ -22,8 +22,7 @@ function OrderCard({ item, category }) {
     setOptionTabVisible(false);
   }
   const handleOnClick = () => {
-
-    for (let orderItem of state[category]) {
+    for (let orderItem of state[category].items) {
       if (orderItem.name === item.name) {
         console.log('removing')
         dispatch({
@@ -44,7 +43,7 @@ function OrderCard({ item, category }) {
     if ((category !== 'protein' &&
       category !== 'rice' &&
       category !== 'beans') ||
-      state[category].length < 2) {
+      state[category].items.length < 2) {
       setAmount('1');
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
@@ -57,6 +56,12 @@ function OrderCard({ item, category }) {
           option: item.options.length > 0 ? item.options[0].name : undefined,
         },
       })
+    // }
+    // else if ((category === 'protein' ||
+    //   category === 'rice' ||
+    //   category === 'beans') &&
+    //   state[category].items.length === 2) {
+
     } else {
       setExcessTabVisible(true);
       setTimeout(() => {
@@ -71,7 +76,7 @@ function OrderCard({ item, category }) {
   }
 
   const handleOptionChange = (index) => {
-    for (let orderItem of state[category]) {
+    for (let orderItem of state[category].items) {
       if (orderItem.name === item.name) {
         dispatch({
           type: 'CHANGE_OPTION',
