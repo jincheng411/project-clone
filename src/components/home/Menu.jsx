@@ -18,6 +18,7 @@ function Menu() {
   return (
     <div className="menu-list">
       <span id="order"></span>
+      {console.log(products)}
       {products.map((item) => <Product key={item._id} name={item.name} imgUrl={item.url} />)}
     </div>
   );
