@@ -19,9 +19,12 @@ app.use('/', express.static(path.join(__dirname, '../build')));
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build', 'index.html'))
+})
+
 app.get('/api/products', async (req, res) => {
   const products = await Product.find();
-
   res.json(products);
 })
 app.get('/api/test', async (req, res) => {
