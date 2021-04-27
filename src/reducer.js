@@ -1,11 +1,11 @@
 export const initialState = {
-  protein: {items: []},
-  rice: {items: []},
-  beans: {items: []},
-  topping: {items: []},
-  options: {items: []},
-  side: {items: []},
-  drinks: {items: []},
+  protein: { items: [] },
+  rice: { items: [] },
+  beans: { items: [] },
+  topping: { items: [] },
+  options: { items: [] },
+  side: { items: [] },
+  drinks: { items: [] },
 }
 
 export const reducer = (state, action) => {
@@ -18,7 +18,7 @@ export const reducer = (state, action) => {
         state[cat].items.length < 2) {
         return {
           ...state,
-          [cat]: {...state[cat], items: [...state[cat].items,action.item]},
+          [cat]: { ...state[cat], items: [...state[cat].items, action.item] },
         }
       }
     case 'REMOVE_FROM_ORDER':
@@ -27,7 +27,7 @@ export const reducer = (state, action) => {
       })
       return {
         ...state,
-        [cat]: {...state[cat], items: filtered},
+        [cat]: { ...state[cat], items: filtered },
       }
     case 'CHANGE_OPTION':
       let targetCat = state[cat].items;
@@ -39,17 +39,31 @@ export const reducer = (state, action) => {
       }
       return {
         ...state,
-        [cat]: {...state[cat], items:targetCat},
+        [cat]: { ...state[cat], items: targetCat },
       }
     case 'SET_AMOUNT':
-      console.log(action)
       let outputAmount = action.amount
-      if(state[cat].items.length === 2) {
-        outputAmount = '1/2';
+      if (cat === 'protein' ||
+        cat === 'rice' ||
+        cat === 'beans') {
+          if (state[cat].items.length === 2) {
+            if (state[cat].double) {
+              outputAmount = '1x';
+            } else {
+              outputAmount = '1/2';
+            }
+          } else if (state[cat].items.length === 1 && state[cat].double) {
+            outputAmount = '2x';
+          }
       }
       return {
         ...state,
-        [cat]: {...state[cat], amount: outputAmount}
+        [cat]: { ...state[cat], amount: outputAmount }
+      }
+    case 'CHANGE_DOUBLE':
+      return {
+        ...state,
+        [cat]: { ...state[cat], double: action.double }
       }
     default:
       return state;

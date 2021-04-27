@@ -13,7 +13,7 @@ function OrderCard({ item, category }) {
   const [excessTabVisible, setExcessTabVisible] = useState(false);
   const [amountTabVisible, setAmountTabVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
-  // const [amount, setAmount] = useState('1');
+  const [amount, setAmount] = useState('1');
   const [isSelected, setIsSelected] = useState(false);
   const handleOnMouseEnterOption = () => {
     setOptionTabVisible(true);
@@ -40,7 +40,6 @@ function OrderCard({ item, category }) {
           }
         })
         console.log(state)
-
         setAmountTabVisible(!amountTabVisible);
         setIsSelected(!isSelected);
         return;
@@ -72,6 +71,7 @@ function OrderCard({ item, category }) {
           }
         })
       }
+
       setAmountTabVisible(!amountTabVisible);
       setIsSelected(!isSelected);
       dispatch({
@@ -104,6 +104,23 @@ function OrderCard({ item, category }) {
 
   const handleOptionChange = (index) => {
     for (let orderItem of state[category].items) {
+      if(index === 1 && category === 'protein') {
+        dispatch({
+          type: 'CHANGE_DOUBLE',
+          double: true,
+          item: {
+            category: category,
+          },
+        })
+      } else {
+        dispatch({
+          type: 'CHANGE_DOUBLE',
+          double: false,
+          item: {
+            category: category,
+          },
+        })
+      }
       if (orderItem.name === item.name) {
         dispatch({
           type: 'CHANGE_OPTION',
@@ -111,17 +128,22 @@ function OrderCard({ item, category }) {
             name: item.name,
             category: category,
             option: item.options[index],
-          }
+          },
         })
         const amountVal = item.options[index].name === 'normal' ? '1' : item.options[index].name
-        dispatch({
-          type: 'SET_AMOUNT',
-          amount: amountVal,
-          item: {
-            category: category,
+        if (category !== 'protein' &&
+        category !== 'rice' &&
+        category !== 'beans'){
+          setAmount(amountVal === 'normal' ? '1' : amountVal);
+        } else {
+            dispatch({
+              type: 'SET_AMOUNT',
+              amount: amountVal,
+              item: {
+                category: category,
+              }
+            })
           }
-        })
-        // setAmount(amountVal === 'normal' ? '1' : amountVal);
         return;
       }
     }
@@ -181,8 +203,12 @@ function OrderCard({ item, category }) {
       </div>
       <CustomizeTab isVisible={optionTabVisible} />
       <ExcessTab isVisible={excessTabVisible} />
-
-      <AmountTab amount={state[category].amount} isVisible={amountTabVisible} hideAmount={handleOnClick} />
+      {
+        category === 'protein' || category === 'rice' || category === 'beans' ?
+        <AmountTab amount={state[category].amount} isVisible={amountTabVisible} hideAmount={handleOnClick} />
+        :
+        <AmountTab amount={amount} isVisible={amountTabVisible} hideAmount={handleOnClick} />
+      }
 
       {/* -----more option ----- */}
       {item.options.length > 0 && <div className="more-option" onMouseEnter={handleOnMouseEnterOption} onMouseLeave={handleOnMouseLeaveOption} onClick={handleOptionsClick} >
