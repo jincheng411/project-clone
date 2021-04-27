@@ -41,6 +41,16 @@ export const reducer = (state, action) => {
         ...state,
         [cat]: {...state[cat], items:targetCat},
       }
+    case 'SET_AMOUNT':
+      console.log(action)
+      let outputAmount = action.amount
+      if(state[cat].items.length === 2) {
+        outputAmount = '1/2';
+      }
+      return {
+        ...state,
+        [cat]: {...state[cat], amount: outputAmount}
+      }
     default:
       return state;
   }
