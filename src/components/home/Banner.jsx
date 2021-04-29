@@ -13,7 +13,7 @@ function Banner() {
           </p>
         </div>
         <div className="promo-btn">
-          <button onClick={()=>window.location.href="#order"}>ORDER NOW</button>
+          <button onClick={()=>window.location.href="#menu"}>ORDER NOW</button>
         </div>
         <div className="promo-text-line2">
           <small>Not available to order in-restaurant.</small>
