@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Item = require('./item.js')
 
 const sectionSchema = new Schema({
   name: {
@@ -8,7 +7,23 @@ const sectionSchema = new Schema({
     require: true,
   },
   note: String,
-  items: [],
+  items: [
+    {
+      name: {
+        type: String,
+        require: true,
+      },
+      cal: {
+        type: String,
+        require: true,
+      },
+      img: {
+        type: String,
+        require: true,
+      },
+      options: [],
+    }
+  ],
 });
 
 const Section = mongoose.model('Section', sectionSchema);
