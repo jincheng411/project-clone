@@ -189,7 +189,7 @@ function OrderCard({ item, category }) {
     // setAmount(amountVal === 'normal' ? '1' : amountVal);
     console.log(state)
   }
-
+console.log(item.price)
   return (
     <div className={`order-card ${isSelected && "card-selected"}`}>
       <img src={item.img} alt="section" />
@@ -197,7 +197,7 @@ function OrderCard({ item, category }) {
         <h2>{item.name}</h2>
         <p>{item.description}</p>
         <div className="cost-and-cal">
-          {item.price && <div className="cost">${item.price[0]}</div>}
+          {item.price.length > 0 && <div className="cost">${item.price[0]}</div>}
           <div className="cal">{item.cal} cal</div>
         </div>
       </div>
