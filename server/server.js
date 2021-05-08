@@ -20,13 +20,16 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 
-app.get('/api/products', async (req, res) => {
+app.get('/api/products', async(req, res) => {
   const products = await Product.find();
   res.json(products);
 })
+app.get('/api/sections', async(req, res) => {
+  const sections = await Section.find();
+  res.json(sections);
+})
 app.get('/api/test', async (req, res) => {
   const section = await Section.findOne().populate('items');
-
   res.send(section);
 })
 
