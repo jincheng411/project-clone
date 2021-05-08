@@ -13,6 +13,7 @@ const sectionSchema = new Schema({
         type: String,
         require: true,
       },
+      price: [],
       cal: {
         type: String,
         require: true,

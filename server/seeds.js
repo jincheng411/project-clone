@@ -53,20 +53,11 @@ const seedProducts = [
     description: 'Everything else you need to round out your meal.',
   },
   {
+    name: 'kid\'s meal',
     url: '/image/kidsmeal.jpeg',
     description: 'Your choice of meat, guacamole or queso, and two toppings to go with a pair of crispy corn or soft flour tortillas. Includes fruit or kid\'s chips and organic juice or milk.',
   },
 ];
-
-let proteinIds = [];
-let riceIds = [];
-let beanIds = [];
-let optionIds = [];
-let toppingIds = [];
-let sideIds = [];
-let drinkIds = [];
-
-
 
 
 const seedProteinItems = [
