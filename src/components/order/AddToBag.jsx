@@ -4,14 +4,13 @@ import './AddToBag.css';
 
 function AddToBag() {
   const [state, dispatch] = useStateValue();
-  console.log(state)
   return (
     <div className="add-to-bag">
       <div className="meal-summary">
         <h3>YOUR MEAL</h3>
-        {state['protein'].length > 0 ?
-         <p>{state['protein'].map((order) =>
-          order.name).join(' & ')}</p>
+        {state['protein'].items.length > 0 ?
+         <p>{state['protein'].items.map((order) =>
+          order.name).join(' & ')} Burrito</p>
           :
           <p>Select a protein or veggie to get started</p>}
 
