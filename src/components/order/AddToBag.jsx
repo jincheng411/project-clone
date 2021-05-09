@@ -4,6 +4,7 @@ import './AddToBag.css';
 
 function AddToBag() {
   const [state, dispatch] = useStateValue();
+  console.log(state)
   return (
     <div className="add-to-bag">
       <div className="meal-summary">
