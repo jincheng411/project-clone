@@ -24,7 +24,6 @@ function OrderCard({ item, category }) {
   const handleOnClick = () => {
     for (let orderItem of state[category].items) {
       if (orderItem.name === item.name) {
-        console.log('removing')
         dispatch({
           type: 'REMOVE_FROM_ORDER',
           item: {
@@ -39,7 +38,6 @@ function OrderCard({ item, category }) {
             category: category,
           }
         })
-        console.log(state)
         setAmountTabVisible(!amountTabVisible);
         setIsSelected(!isSelected);
         return;
@@ -95,8 +93,6 @@ function OrderCard({ item, category }) {
         setExcessTabVisible(false);
       }, 2200)
     }
-
-    console.log(state)
   }
   const handleOptionsClick = () => {
     setOptionsVisible(!optionsVisible);
@@ -187,9 +183,7 @@ function OrderCard({ item, category }) {
       }
     })
     // setAmount(amountVal === 'normal' ? '1' : amountVal);
-    console.log(state)
   }
-console.log(item.price)
   return (
     <div className={`order-card ${isSelected && "card-selected"}`}>
       <img src={item.img} alt="section" />
