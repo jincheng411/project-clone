@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Checkout from './Checkout.jsx';
 import './Navbar.css';
 import SubjectIcon from '@material-ui/icons/Subject';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
@@ -6,6 +7,10 @@ import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+  const [checkoutVisible, setCheckoutVisible] = useState(false);
+  const handleOnClick = () => {
+    setCheckoutVisible(!checkoutVisible);
+  }
   return (
     <div className="navbar">
       <div className="left-section">
@@ -25,8 +30,9 @@ function Navbar() {
         </div>
       </div>
       <div className="right-section">
-        <LocalMallOutlinedIcon className="bag-icon" />
+        <span onClick={handleOnClick}><LocalMallOutlinedIcon className="bag-icon" /></span>
       </div>
+      <Checkout isVisible={checkoutVisible} toggleCheckout={handleOnClick}/>
     </div>
   )
 }

@@ -20,7 +20,6 @@ function Order({products}) {
       console.log(err)
     })
   }, [setSections])
-  console.log(sections)
   return (
     <>
       <div className="order">
