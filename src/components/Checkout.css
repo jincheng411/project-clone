@@ -15,15 +15,45 @@
 .checkout-content {
   background-color: white;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 0;
   right: 0;
   width: 430px;
   height: 100%;
   z-index: 103;
 }
+.checkout-group-order{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  color: #b68207;
+  cursor: pointer;
+  border-bottom: 1px #d4cbc7 solid;
+}
+.checkout-group-order>h3{
+  font-size: 1.2em;
+  border-bottom: 2px solid #b68207;
+}
+.checkout-group-icon {
+  margin-right: 22px;
+  transform: scale(1.8);
+}
 .checkout-close {
   color: #451400;
   float: right;
   font-size: 2.5em;
   cursor: pointer;
+  position: absolute;
+  right: 50px;
+  /* align-items: flex-end; */
+  /* margin-left: 50px; */
+}
+.checkout-and-close{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
