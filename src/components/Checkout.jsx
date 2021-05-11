@@ -1,8 +1,10 @@
 import React from 'react';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
+import { useStateValue } from '../StateProvider.js';
 import './Checkout.css';
 
 function Checkout({ isVisible, toggleCheckout }) {
+  const [state, dispatch] = useStateValue();
   const handleOnClick = () => {
     toggleCheckout();
   }
@@ -12,6 +14,7 @@ function Checkout({ isVisible, toggleCheckout }) {
       toggleCheckout();
     }
   }
+  console.log(state)
   return (
     <div className={`checkout ${isVisible && "checkout-visible"}`} id="bg">
       <div className="checkout-content">
@@ -28,8 +31,50 @@ function Checkout({ isVisible, toggleCheckout }) {
             <span onClick={handleOnClick} className="checkout-close">&times;</span>
           </div>
           <div className="checkout-group-order"><GroupAddIcon className="checkout-group-icon" /><h3>MAKE IT A GROUP ORDER</h3></div>
-
         </div>
+        <div className="checkout-list">
+
+          <div className="checkout-list-indiv">
+            <div className="checkout-customer">
+              <input type="text" value="Jin" />
+              <h5>$10.30</h5>
+            </div>
+            <div className="checkout-product">
+              <h5>Steak Burrito</h5>
+              <h5>$10.30</h5>
+            </div>
+            <div className="checkout-product-detail">
+              <p>Steak (½), Chicken (½), Brown Rice, Tomatillo-Green Chili Salsa, Fresh Tomato Salsa, Pinto Beans (½), and Black Beans (½)</p>
+            </div>
+            <div className="checkout-product-ops">
+              <span>REMOVE</span>
+              <span>EDIT</span>
+              <span>DUPLICATE</span>
+            </div>
+            <div className="checkout-product-underline"></div>
+          </div>
+
+          <div className="checkout-list-indiv">
+            <div className="checkout-customer">
+              <input type="text" value="Jin" />
+              <h5>$10.30</h5>
+            </div>
+            <div className="checkout-product">
+              <h5>Steak Burrito</h5>
+              <h5>$10.30</h5>
+            </div>
+            <div className="checkout-product-detail">
+              <p>Steak (½), Chicken (½), Brown Rice, Tomatillo-Green Chili Salsa, Fresh Tomato Salsa, Pinto Beans (½), and Black Beans (½)</p>
+            </div>
+            <div className="checkout-product-ops">
+              <span>REMOVE</span>
+              <span>EDIT</span>
+              <span>DUPLICATE</span>
+            </div>
+            <div className="checkout-product-underline"></div>
+          </div>
+        </div>
+
       </div>
     </div>
   );
