@@ -1,0 +1,28 @@
+.checkout-addition-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.add-on-card {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+.add-on-card>img {
+  width: 100px;
+  object-fit:cover;
+  align-self: center;
+}
+.add-on-card>span {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8em;
+  transform: scale(0.8, 1);
+}
+.add-on-card>p {
+  text-align: center;
+  margin-top: 0;
+  color: #786259;
+  font-size: 0.9em;
+}

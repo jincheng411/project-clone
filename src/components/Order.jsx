@@ -13,7 +13,6 @@ function Order({products}) {
   useEffect(() => {
     axios.get('/api/sections')
     .then((res) => {
-      console.log(res)
       setSections(res.data)
     })
     .catch((err) => {
