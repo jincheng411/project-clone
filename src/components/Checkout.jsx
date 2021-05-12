@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import { useStateValue } from '../StateProvider.js';
+import AddOnCard from './order/AddOnCard.jsx';
+import axios from 'axios';
 import './Checkout.css';
 
 function Checkout({ isVisible, toggleCheckout }) {
   const [state, dispatch] = useStateValue();
+  const [addOn, setAddOn] = useState([]);
   const handleOnClick = () => {
     toggleCheckout();
   }
@@ -14,7 +17,14 @@ function Checkout({ isVisible, toggleCheckout }) {
       toggleCheckout();
     }
   }
-  console.log(state)
+  useEffect(() => {
+    axios.get('/api/sections')
+      .then((res) => {
+        const addOnItems = [res.data[5].items[0], res.data[5].items[3], res.data[6].items[5]];
+        setAddOn(addOnItems);
+      })
+  }, [setAddOn])
+  console.log(addOn)
   return (
     <div className={`checkout ${isVisible && "checkout-visible"}`} id="bg">
       <div className="checkout-content">
@@ -71,10 +81,16 @@ function Checkout({ isVisible, toggleCheckout }) {
               <span>EDIT</span>
               <span>DUPLICATE</span>
             </div>
-            <div className="checkout-product-underline"></div>
           </div>
         </div>
-
+        <div className="checkout-addition">
+          <p>COMPLETE YOUR MEAL</p>
+          <div className="checkout-addition-cards">
+            {addOn.map((item) => {
+              return <AddOnCard item={item} />
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
