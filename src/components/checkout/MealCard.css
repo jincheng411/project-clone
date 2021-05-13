@@ -1,0 +1,55 @@
+.mealcard-customer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #451400;
+}
+.mealcard-customer>input {
+  width: 78%;
+  border: none;
+  border-bottom: 2px solid #451400;
+  font-size: 1em;
+  height: 20px;
+  outline: none;
+  font-weight: 600;
+}
+.mealcard-customer>h5:nth-child(2) {
+  margin-left: auto;
+  font-size: 1.2em;
+}
+.mealcard-product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 24px;
+  font-size: 1.3em;
+  color: #451400;
+}
+.mealcard-product>h5:first-child {
+  width: 78%;
+  margin-top: 13px;
+}
+.mealcard-product>h5:nth-child(2) {
+  margin-left: auto;
+  font-size: 0.9em;
+  font-weight: 100;
+  margin-top: 13px;
+}
+.mealcard-product-detail {
+  color: #786259;
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+.mealcard-product-detail>p {
+  margin-top: 0;
+}
+.mealcard-product-ops {
+  font-weight: 600;
+  font-size: 0.8em;
+  color: #451400;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.mealcard-product-ops>span {
+  margin-right: 10px;
+}
