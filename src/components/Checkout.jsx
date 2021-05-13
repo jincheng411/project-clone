@@ -91,7 +91,18 @@ function Checkout({ isVisible, toggleCheckout }) {
             })}
           </div>
         </div>
+        <div className="checkout-add-btn">
+          <h3>ADD ANOTHER MENU ITEM</h3>
+        </div>
+        <div className="break-line"></div>
+        <div className="checkout-summary">
+          <div className="checkout-summary-total">
+            <span className="checkout-summary-total-text">Bag Total</span>
+            <span className="checkout-summary-total-price">$32.95</span>
+          </div>
+        </div>
       </div>
+
     </div>
   );
 }
