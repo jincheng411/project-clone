@@ -126,4 +126,35 @@
   font-weight: 600;
   font-size: 0.85em;
   margin-top: 25px;
+  margin-bottom: 0;
+}
+.checkout-add-btn {
+  border: 1px solid #451400;
+  color: #451400;
+  text-align: center;
+  margin: 0 25px;
+  font-size: 0.9em;
+}
+.checkout-add-btn>h3 {
+  margin: 16px 0;
+  transform: scale(0.9, 1.2);
+}
+.break-line {
+  border-bottom: 1px solid #786259;
+  margin-top: 20px;
+}
+.checkout-summary {
+  background-color: #f7f2ed;
+  color: #451400;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.checkout-summary-total {
+  margin: 25px 25px;
+}
+.checkout-summary-total-text {
+  width: 78%;
+}
+.checkout-summary-total-price {
+  margin-left: auto;
 }
