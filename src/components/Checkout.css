@@ -137,20 +137,20 @@
 }
 .checkout-add-btn>h3 {
   margin: 16px 0;
-  transform: scale(0.9, 1.2);
+  transform: scale(0.9, 1.1);
 }
 .break-line {
-  border-bottom: 1px solid #786259;
+  border-bottom: 1px solid #d4cbc7;
   margin-top: 20px;
 }
 .checkout-summary {
   background-color: #f7f2ed;
   color: #451400;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 .checkout-summary-total {
   margin: 25px 25px;
+  display: flex;
 }
 .checkout-summary-total-text {
   width: 78%;

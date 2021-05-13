@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import { useStateValue } from '../StateProvider.js';
 import AddOnCard from './order/AddOnCard.jsx';
+import MealCard from './checkout/MealCard.jsx';
 import axios from 'axios';
 import './Checkout.css';
 
@@ -42,67 +43,34 @@ function Checkout({ isVisible, toggleCheckout }) {
           </div>
           <div className="checkout-group-order"><GroupAddIcon className="checkout-group-icon" /><h3>MAKE IT A GROUP ORDER</h3></div>
         </div>
-        <div className="checkout-list">
-
-          <div className="checkout-list-indiv">
-            <div className="checkout-customer">
-              <input type="text" value="Jin" />
-              <h5>$10.30</h5>
-            </div>
-            <div className="checkout-product">
-              <h5>Steak Burrito</h5>
-              <h5>$10.30</h5>
-            </div>
-            <div className="checkout-product-detail">
-              <p>Steak (½), Chicken (½), Brown Rice, Tomatillo-Green Chili Salsa, Fresh Tomato Salsa, Pinto Beans (½), and Black Beans (½)</p>
-            </div>
-            <div className="checkout-product-ops">
-              <span>REMOVE</span>
-              <span>EDIT</span>
-              <span>DUPLICATE</span>
-            </div>
-            <div className="checkout-product-underline"></div>
+        <div className="checkout-scroll">
+          <div className="checkout-list">
+            <MealCard />
+            <MealCard />
           </div>
-
-          <div className="checkout-list-indiv">
-            <div className="checkout-customer">
-              <input type="text" value="Jin" />
-              <h5>$10.30</h5>
-            </div>
-            <div className="checkout-product">
-              <h5>Steak Burrito</h5>
-              <h5>$10.30</h5>
-            </div>
-            <div className="checkout-product-detail">
-              <p>Steak (½), Chicken (½), Brown Rice, Tomatillo-Green Chili Salsa, Fresh Tomato Salsa, Pinto Beans (½), and Black Beans (½)</p>
-            </div>
-            <div className="checkout-product-ops">
-              <span>REMOVE</span>
-              <span>EDIT</span>
-              <span>DUPLICATE</span>
+          <div className="checkout-addition">
+            <p>COMPLETE YOUR MEAL</p>
+            <div className="checkout-addition-cards">
+              {addOn.map((item) => {
+                return <AddOnCard item={item} />
+              })}
             </div>
           </div>
-        </div>
-        <div className="checkout-addition">
-          <p>COMPLETE YOUR MEAL</p>
-          <div className="checkout-addition-cards">
-            {addOn.map((item) => {
-              return <AddOnCard item={item} />
-            })}
+          <div className="checkout-add-btn">
+            <h3>ADD ANOTHER MENU ITEM</h3>
           </div>
-        </div>
-        <div className="checkout-add-btn">
-          <h3>ADD ANOTHER MENU ITEM</h3>
-        </div>
-        <div className="break-line"></div>
-        <div className="checkout-summary">
-          <div className="checkout-summary-total">
-            <span className="checkout-summary-total-text">Bag Total</span>
-            <span className="checkout-summary-total-price">$32.95</span>
+          <div className="break-line"></div>
+          <div className="checkout-summary">
+            <div className="checkout-summary-total">
+              <span className="checkout-summary-total-text">Bag Total</span>
+              <span className="checkout-summary-total-price">$32.95</span>
+            </div>
+            <div className="checkout-add-btn">
+              <h3>SIGN IN TO USE REWARD</h3>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 }
