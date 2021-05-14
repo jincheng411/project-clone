@@ -53,3 +53,7 @@
 .mealcard-product-ops>span {
   margin-right: 10px;
 }
+.mealcard-product-underline {
+  margin-top: 25px;
+  border-bottom: 1px solid #d4cbc7;
+}

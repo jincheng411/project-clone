@@ -57,68 +57,8 @@
   justify-content: center;
   margin-top: 30px;
 }
-.checkout-list {
+.margin {
   margin: 0 25px;
-}
-.checkout-customer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: #451400;
-}
-.checkout-customer>input {
-  width: 78%;
-  border: none;
-  border-bottom: 2px solid #451400;
-  font-size: 1em;
-  height: 20px;
-  outline: none;
-  font-weight: 600;
-}
-.checkout-customer>h5:nth-child(2) {
-  margin-left: auto;
-  font-size: 1.2em;
-}
-.checkout-product {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 24px;
-  font-size: 1.3em;
-  color: #451400;
-}
-.checkout-product>h5:first-child {
-  width: 78%;
-  margin-top: 13px;
-
-}
-.checkout-product>h5:nth-child(2) {
-  margin-left: auto;
-  font-size: 0.9em;
-  font-weight: 100;
-  margin-top: 13px;
-}
-.checkout-product-detail {
-  color: #786259;
-  font-size: 0.9em;
-  line-height: 1.3em;
-}
-.checkout-product-detail>p {
-  margin-top: 0;
-}
-.checkout-product-ops {
-  font-weight: 600;
-  font-size: 0.8em;
-  color: #451400;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.checkout-product-ops>span {
-  margin-right: 10px;
-}
-.checkout-product-underline {
-  margin-top: 25px;
-  border-bottom: 1px solid #786259;
 }
 .checkout-addition>p {
   text-align: center;
@@ -134,6 +74,7 @@
   text-align: center;
   margin: 0 25px;
   font-size: 0.9em;
+  margin-bottom: 20px;
 }
 .checkout-add-btn>h3 {
   margin: 16px 0;
@@ -141,7 +82,6 @@
 }
 .break-line {
   border-bottom: 1px solid #d4cbc7;
-  margin-top: 20px;
 }
 .checkout-summary {
   background-color: #f7f2ed;
@@ -149,12 +89,59 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .checkout-summary-total {
-  margin: 25px 25px;
+  margin: 25px;
+  margin-top: 0;
+  padding-top: 25px;
   display: flex;
 }
 .checkout-summary-total-text {
-  width: 78%;
+
 }
 .checkout-summary-total-price {
   margin-left: auto;
+}
+.checkout-scroll {
+  overflow: scroll;
+}
+.checkout-btn {
+  background-color: #451400;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+}
+.bold-text {
+  font-weight: 600;
+}
+.checkout-summary-tax {
+  margin: 0 25px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.checkout-promo-code{
+  display: flex;
+}
+.checkout-promo-code>span{
+  margin-left: auto;
+  font-size: 0.7em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.checkout-promo-code>input{
+  border: none;
+  background-color:#f7f2ed;
+  outline: none;
+  width: 87%;
+}
+.checkout-grand-total {
+  font-size: 1.2em;
+  margin: 25px;
+  margin-bottom: 0;
+  padding-bottom: 25px;
+  display: flex;
 }
