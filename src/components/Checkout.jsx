@@ -29,6 +29,7 @@ function Checkout({ isVisible, toggleCheckout }) {
   return (
     <div className={`checkout ${isVisible && "checkout-visible"}`} id="bg">
       <div className="checkout-content">
+
         <div className="checkout-title">
           <div className="checkout-and-close">
             <div className="mid-section">
@@ -43,11 +44,13 @@ function Checkout({ isVisible, toggleCheckout }) {
           </div>
           <div className="checkout-group-order"><GroupAddIcon className="checkout-group-icon" /><h3>MAKE IT A GROUP ORDER</h3></div>
         </div>
+
         <div className="checkout-scroll">
-          <div className="checkout-list">
+          <div className="margin">
             <MealCard />
             <MealCard />
           </div>
+
           <div className="checkout-addition">
             <p>COMPLETE YOUR MEAL</p>
             <div className="checkout-addition-cards">
@@ -60,6 +63,7 @@ function Checkout({ isVisible, toggleCheckout }) {
             <h3>ADD ANOTHER MENU ITEM</h3>
           </div>
           <div className="break-line"></div>
+
           <div className="checkout-summary">
             <div className="checkout-summary-total">
               <span className="checkout-summary-total-text">Bag Total</span>
@@ -68,7 +72,28 @@ function Checkout({ isVisible, toggleCheckout }) {
             <div className="checkout-add-btn">
               <h3>SIGN IN TO USE REWARD</h3>
             </div>
+            <div class="checkout-promo-code margin">
+              <input />
+              <span>APPLY</span>
+            </div>
+            <div className="break-line margin"></div>
+            <div className="checkout-summary-total">
+              <span className="checkout-summary-total-subtotal bold-text ">Subtotal</span>
+              <span className="checkout-summary-total-price bold-text">$32.95</span>
+            </div>
+            <div className="checkout-summary-tax">
+              <span className="checkout-summary-total-subtotal">Tax</span>
+              <span className="checkout-summary-total-price">$2.92</span>
+            </div>
+            <div className="break-line margin"></div>
+            <div className="checkout-grand-total">
+              <span className="checkout-summary-total-subtotal bold-text ">TOTAL</span>
+              <span className="checkout-summary-total-price bold-text">$35.87</span>
+            </div>
           </div>
+        </div>
+        <div className="checkout-btn">
+          <span>CHECKOUT</span>
         </div>
       </div>
     </div>
