@@ -6,6 +6,7 @@ export const initialState = {
   options: { items: [] },
   side: { items: [] },
   drinks: { items: [] },
+  order: [],
 }
 
 export const reducer = (state, action) => {
