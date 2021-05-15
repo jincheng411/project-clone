@@ -12,6 +12,9 @@ function Checkout({ isVisible, toggleCheckout }) {
   const handleOnClick = () => {
     toggleCheckout();
   }
+  const handleCheckout = () => {
+    console.log(state)
+  }
   var bg = document.getElementById("bg");
   window.onclick = function (event) {
     if (event.target === bg) {
@@ -25,7 +28,6 @@ function Checkout({ isVisible, toggleCheckout }) {
         setAddOn(addOnItems);
       })
   }, [setAddOn])
-  console.log(addOn)
   return (
     <div className={`checkout ${isVisible && "checkout-visible"}`} id="bg">
       <div className="checkout-content">
@@ -93,7 +95,7 @@ function Checkout({ isVisible, toggleCheckout }) {
           </div>
         </div>
         <div className="checkout-btn">
-          <span>CHECKOUT</span>
+          <span onClick={handleCheckout}>CHECKOUT</span>
         </div>
       </div>
     </div>
