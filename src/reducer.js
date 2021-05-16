@@ -6,7 +6,7 @@ export const initialState = {
   options: { items: [] },
   side: { items: [] },
   drinks: { items: [] },
-  order: [],
+  mealCount: 0,
 }
 
 export const reducer = (state, action) => {
@@ -65,6 +65,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         [cat]: { ...state[cat], double: action.double }
+      }
+    case 'ADD_TO_CART':
+      return {
+        ...state,
+        mealCount: state.mealCount + 1,
       }
     default:
       return state;
