@@ -13,8 +13,12 @@ function Checkout({ isVisible, toggleCheckout }) {
     toggleCheckout();
   }
   const handleCheckout = () => {
-    console.log(state)
+
+    dispatch({
+      type: ADD_TO_CART,
+    })
   }
+  console.log(state)
   var bg = document.getElementById("bg");
   window.onclick = function (event) {
     if (event.target === bg) {
@@ -31,7 +35,6 @@ function Checkout({ isVisible, toggleCheckout }) {
   return (
     <div className={`checkout ${isVisible && "checkout-visible"}`} id="bg">
       <div className="checkout-content">
-
         <div className="checkout-title">
           <div className="checkout-and-close">
             <div className="mid-section">
