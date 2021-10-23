@@ -5,7 +5,7 @@ function MealCard() {
   return (
     <div className="mealcard">
       <div className="mealcard-customer">
-        <input type="text" value="Jin" />
+        <input type="text"/>
         <h5>$10.30</h5>
       </div>
       <div className="mealcard-product">

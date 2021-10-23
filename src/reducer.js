@@ -6,9 +6,8 @@ export const initialState = {
   options: { items: [] },
   side: { items: [] },
   drinks: { items: [] },
-  mealCount: 0,
+  mealCount: Number(window.localStorage.mealCount) || 0,
 }
-
 export const reducer = (state, action) => {
   const cat = action.item?.category;
   switch (action.type) {

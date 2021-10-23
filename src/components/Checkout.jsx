@@ -13,9 +13,7 @@ function Checkout({ isVisible, toggleCheckout }) {
     toggleCheckout();
   }
   const handleCheckout = () => {
-    dispatch({
-      type: 'ADD_TO_CART',
-    })
+
   }
   var bg = document.getElementById("bg");
   window.onclick = function (event) {
@@ -30,6 +28,10 @@ function Checkout({ isVisible, toggleCheckout }) {
         setAddOn(addOnItems);
       })
   }, [setAddOn])
+  let mealArr = [];
+  for (let i = 0; i < state.mealCount; i++) {
+    mealArr.push(i)
+  }
   return (
     <div className={`checkout ${isVisible && "checkout-visible"}`} id="bg">
       <div className="checkout-content">
@@ -50,15 +52,14 @@ function Checkout({ isVisible, toggleCheckout }) {
 
         <div className="checkout-scroll">
           <div className="margin">
-            <MealCard />
-            <MealCard />
+            {mealArr.map(item => <MealCard key={item}/>)}
           </div>
 
           <div className="checkout-addition">
             <p>COMPLETE YOUR MEAL</p>
             <div className="checkout-addition-cards">
               {addOn.map((item) => {
-                return <AddOnCard item={item} />
+                return <AddOnCard item={item} key={item._id}/>
               })}
             </div>
           </div>
@@ -75,7 +76,7 @@ function Checkout({ isVisible, toggleCheckout }) {
             <div className="checkout-add-btn">
               <h3>SIGN IN TO USE REWARD</h3>
             </div>
-            <div class="checkout-promo-code margin">
+            <div className="checkout-promo-code margin">
               <input />
               <span>APPLY</span>
             </div>

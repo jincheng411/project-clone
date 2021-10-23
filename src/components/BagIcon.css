@@ -10,7 +10,7 @@
 .nav-bag-icon:hover {
   cursor: pointer;
 }
-.nav-bag-icon > :first-child {
+.nav-bag-icon-count {
   z-index: 1;
   top: 5px;
   left: -8px;

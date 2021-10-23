@@ -5,6 +5,7 @@ import './AddToBag.css';
 function AddToBag(addToBag) {
   const [state, dispatch] = useStateValue();
   const handleClick = () => {
+    window.localStorage.setItem('mealCount', Number(window.localStorage.mealCount) + 1 || 1);
     dispatch({
       type: 'ADD_TO_CART',
     })

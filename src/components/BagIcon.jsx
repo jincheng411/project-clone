@@ -8,7 +8,7 @@ function BagIcon({ handleOnClick }) {
   const [state, dispatch] = useStateValue();
   return (
     <div className="nav-bag-icon" onClick={() => (handleOnClick())}>
-      <span>{state.mealCount}</span>
+      {state.mealCount > 0 && <span className="nav-bag-icon-count">{state.mealCount}</span>}
       <span><LocalMallOutlinedIcon className="bag-icon" /></span>
     </div>
   );
