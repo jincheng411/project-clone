@@ -86,16 +86,11 @@
   font-weight: 800;
 }
 
-
 .right-section{
   align-items: flex-end;
   margin-right: 40px;
 }
-.bag-icon{
-  font-size: 2em !important;
-  color:#451400;
-  cursor: pointer;
-}
+
 
 @media (max-width: 576px) {
   .sign-in{

@@ -1,0 +1,23 @@
+.bag-icon {
+  font-size: 2em !important;
+  color: #451400;
+  cursor: pointer;
+  transform: scaleY(1.2);
+}
+.nav-bag-icon {
+  position: relative;
+}
+.nav-bag-icon:hover {
+  cursor: pointer;
+}
+.nav-bag-icon > :first-child {
+  z-index: 1;
+  top: 5px;
+  left: -8px;
+  position: absolute;
+  background-color: #ad2118;
+  padding: 2px 7px;
+  font-weight: 600;
+  color: white;
+  border-radius: 50%;
+}

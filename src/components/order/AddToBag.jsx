@@ -2,8 +2,13 @@ import React from 'react';
 import { useStateValue } from '../../StateProvider.js'
 import './AddToBag.css';
 
-function AddToBag() {
+function AddToBag(addToBag) {
   const [state, dispatch] = useStateValue();
+  const handleClick = () => {
+    dispatch({
+      type: 'ADD_TO_CART',
+    })
+  }
   return (
     <div className="add-to-bag">
       <div className="meal-summary">
@@ -15,7 +20,7 @@ function AddToBag() {
           <p>Select a protein or veggie to get started</p>}
 
       </div>
-      <div className="add-to-bag-btn">
+      <div className="add-to-bag-btn" onClick={handleClick}>
         <h2>ADD TO BAG</h2>
       </div>
     </div>

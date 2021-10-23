@@ -13,12 +13,10 @@ function Checkout({ isVisible, toggleCheckout }) {
     toggleCheckout();
   }
   const handleCheckout = () => {
-
     dispatch({
-      type: ADD_TO_CART,
+      type: 'ADD_TO_CART',
     })
   }
-  console.log(state)
   var bg = document.getElementById("bg");
   window.onclick = function (event) {
     if (event.target === bg) {

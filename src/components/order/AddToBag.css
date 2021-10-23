@@ -27,6 +27,9 @@
   justify-content: center;
   cursor: pointer;
 }
+.add-to-bag-btn:hover{
+  background-color: #5f1d03;
+}
 .add-to-bag-btn>h2{
   color: white;
   font-size: 1.3em;
